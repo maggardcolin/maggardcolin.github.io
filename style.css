@@ -1,38 +1,19 @@
-
+body {
+    background-color: blanchedalmond;
+    margin:0;
+}
 section {
     margin: 7.5%;
 }
-@media only screen and (max-width: 900px) {
-    div sec1 {
-        padding: 15%;
-        padding-top: 4%;
-        padding-bottom: 0%;
-    }
-    div {
-        column-count: 1;  
-        display: flex;
-    }
-    body {
-        background-color: rgb(100, 121, 240);
-        margin:0;
-    }
+div sec1 {
+    padding: 10%;
+    padding-top: 4%;
+    padding-bottom: 0%;
 }
-@media only screen and (min-width: 901px) {
-    div sec1 {
-        padding: 10%;
-        padding-top: 4%;
-        padding-bottom: 0%;
-    }
-    div {
-        column-count: 2;  
-        display: flex;
-    }
-    body {
-        background-color: blanchedalmond;
-        margin:0;
-    }
+div {
+    column-count: 2;  
+    display: flex;
 }
-
 h1 {
     font-size: xx-large;
 }
