@@ -53,27 +53,15 @@ h1 {
 .active {
     background-color: #0a4690;
 }
-#santaoutput {
-    display: block;
+.icon {
+    display: inline-block;
     margin-left: auto;
     margin-right: auto;
-    width: 35%;
+    width: 75px;
     height:auto;
+    padding: 5px;
 }
-#datagenoutput {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width:50%;
-    height:auto;
-}
-#gofishoutput {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width:25%;
-    height:auto;
-}
-.image {
-    border: 2px solid #333;
+.smaller {
+    text-align: center;
+    margin: 15%;
 }
