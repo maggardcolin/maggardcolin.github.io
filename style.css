@@ -6,26 +6,22 @@ section {
     margin: 7.5%;
 }
 @media only screen and (max-width: 900px) {
-    div {
-        column-count: 1;  
-        display: flex;
+    div sec1 {
+        padding: 15%;
+        padding-top: 4%;
+        padding-bottom: 0%;
     }
 }
 @media only screen and (min-width: 901px) {
-    div {
-        column-count: 2;  
-        display: flex;
+    div sec1 {
+        padding: 10%;
+        padding-top: 4%;
+        padding-bottom: 0%;
     }
 }
-div s1 {
-    padding: 10%;
-    padding-top: 4%;
-    padding-bottom: 0%;
-}
-div s2 {
-    padding: 10%;
-    padding-top: 4%;
-    padding-bottom: 0%;
+div {
+    column-count: 2;  
+    display: flex;
 }
 h1 {
     font-size: xx-large;
