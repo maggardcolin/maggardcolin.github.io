@@ -1,7 +1,4 @@
-body {
-    background-color: blanchedalmond;
-    margin:0;
-}
+
 section {
     margin: 7.5%;
 }
@@ -15,6 +12,10 @@ section {
         column-count: 1;  
         display: flex;
     }
+    body {
+        background-color: rgb(100, 121, 240);
+        margin:0;
+    }
 }
 @media only screen and (min-width: 901px) {
     div sec1 {
@@ -25,6 +26,10 @@ section {
     div {
         column-count: 2;  
         display: flex;
+    }
+    body {
+        background-color: blanchedalmond;
+        margin:0;
     }
 }
 
