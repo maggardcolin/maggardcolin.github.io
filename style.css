@@ -11,6 +11,10 @@ section {
         padding-top: 4%;
         padding-bottom: 0%;
     }
+    div {
+        column-count: 1;  
+        display: flex;
+    }
 }
 @media only screen and (min-width: 901px) {
     div sec1 {
@@ -18,11 +22,12 @@ section {
         padding-top: 4%;
         padding-bottom: 0%;
     }
+    div {
+        column-count: 2;  
+        display: flex;
+    }
 }
-div {
-    column-count: 2;  
-    display: flex;
-}
+
 h1 {
     font-size: xx-large;
 }
