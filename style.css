@@ -1,0 +1,65 @@
+body {
+    background-color: blanchedalmond;
+    margin:0;
+}
+section {
+    margin: 100px;
+}
+h1 {
+    font-size: xx-large;
+}
+.title {
+    text-align: center;
+    margin-top: 70px;
+}
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.navbarelements {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+.navbarelements a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbarelements :hover {
+    background-color: rgb(200, 76, 48);
+}
+.active {
+    background-color: #0a4690;
+}
+#santaoutput {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    height:auto;
+}
+#datagenoutput {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
+    height:auto;
+}
+#gofishoutput {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:25%;
+    height:auto;
+}
+.image {
+    border: 2px solid #333;
+}

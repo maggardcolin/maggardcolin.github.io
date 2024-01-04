@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Maggard Portfolio</title>
+        <meta name=author content= "Colin Maggard">
+        <meta keywords="Portfolio, Resume, Job, Internship">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <ul class="navbar">
+            <li class="navbarelements"><a href="index.html">Home</a></li>
+            <li class="navbarelements"><a href="projects.html" class="active">Projects</a></li>
+            <li class="navbarelements"><a href="experience.html">Experience</a></li>
+            <li class="navbarelements"><a href="contact.html">Contact</a></li>
+        </ul>
+    <section>
+        
+        <h1 class="title">Projects</h1>
+
+        <h2>GoFish - Java</h2>
+        <p>The goal of this app was to create a GoFish-like game that a user plays against a computer.
+            This computer can remember which cards the player asks for that it does not have at the time, 
+            and will also remember which cards it has already asked for that the player does not have (to its knowledge).
+            The computer will ask if you have cards in this order: cards that it knows you have that it also has, cards that
+            it has that it hasn't asked you for already, then finally cards that it has that it has already asked for. I created this project 
+            in December 2023 and would describe this as a very basic AI project due to the computer player having the ability to make intelligent decisions that 
+            aren't entirely based on random chance.
+        </p>
+        <h3>How it works</h3>
+        <p>Each player has a hand, as well as a point total that is updated each time a pair is made. The deck/pond and each of these 
+            hands use ArrayLists to store the Card objects. There is a method that checks a player's hand for pairs, and with the aforementioned 
+            computer logic, it is possible to play a full game against the computer. This game follows what I would consider to be 
+            standard rules for GoFish, but individual rules are not difficult to implement and I may consider adding a way to change them, such as 
+            the number of cards drawn when your hand is empty, or using 4-of-a-kinds instead of pairs for points.
+        </p>
+        <img src="gofishoutput.png" alt="Example Program Output" id="gofishoutput" class="image">
+
+        <h2>Secret Santa App - Java</h2>
+        <p>
+            The goal for this app was to create an app that would match
+            each name with a different name, while avoiding someone's name being
+            matched to themselves (for a secret santa gift exchange). I implemented this 
+            using a hashmap class that I developed in my CS400 class in Fall 2023, and created 
+            JUnit tests that made sure that the output was as expected. This project utilized the 
+            programming concepts that I was learning in my class at the time, including hashmaps, 
+            circular indices, and frontend/backend development.
+        </p>
+        <h3>How it works</h3>
+        <p>
+            The app prompts the user for how many people are participating in 
+            the secret santa gift exchange, then for the names of each of the users. It then
+            sequentially assigns each user a different name, and restarts the entire process if anyone's name
+            is matched to themselves. I stored each name pair in a hashmap and checked to see if the name pair
+            existed already to determine if the process should be run again. I have a demonstration on what potential 
+            output may look like below, and also file output options in the code so that the names are not revealed.
+        </p>
+        <img src="secretsantaoutput.png" alt="Example Program Output" id="santaoutput" class="image">
+
+        <h2><br> Statistical Data Generator App - Python</h2>
+        <p>
+            The goal for this app was to create a program that would generate a set of numbers that correspond to 
+            a user-specified set of statistical parameters, namely mean and standard deviation. This program has options to
+            control the number of decimal places (precision), number of points generated, and maximum amount error permissible.
+            I created this project in Spring 2022 and it was partially because of my work on this project that I became interested 
+            in programming and going to school for it.
+        </p>
+        <h3>How it works</h3>
+        <p>
+            This program prompts the user for their intended average, standard deviation, number of data points, precision and maximum permissible error, 
+            then makes a few intermediary calculations in order to be able to supply the random.randint() function with integer values based on the number of 
+            decimal places desired. The main loop body starts off by determining the "differential" of the point, that is, how far off it is from the desired mean 
+            value. It then adds in any factors to be considered from the previous iterations of the loop, if any, and then updates a value called "leftovers" that 
+            represents the amount of "pull" we need in order to "balance" the data points around the desired mean. The created point is then appended to an array of numbers 
+            and the program repeats until all data points are created.
+        </p>
+        <img src="datagenoutput.png" alt="Example Program Output" id="datagenoutput" class="image">
+    </section>
+    </body>
+</html>
