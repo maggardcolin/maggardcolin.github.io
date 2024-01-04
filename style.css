@@ -3,7 +3,21 @@ body {
     margin:0;
 }
 section {
-    margin: 100px;
+    margin: 7.5%;
+}
+div {
+    column-count: 2;  
+    display: flex;
+}
+div s1 {
+    padding: 10%;
+    padding-top: 4%;
+    padding-bottom: 0%;
+}
+div s2 {
+    padding: 10%;
+    padding-top: 4%;
+    padding-bottom: 0%;
 }
 h1 {
     font-size: xx-large;
