@@ -60,3 +60,7 @@ h1 {
     text-align: center;
     margin: 15%;
 }
+#courseload {
+    width: 650px;
+    height: auto;
+}
