@@ -13,6 +13,10 @@ div sec1 {
 div {
     display: flex;
 }
+.centered-content {
+    text-align: center;
+    margin: 0 auto;
+}
 h1 {
     font-size: xx-large;
 }
@@ -63,6 +67,9 @@ h1 {
 .course-image {
     width: 650px;
     height: 390px;
+    border: 1px solid #000000;
+    margin: 0 auto;
+
 }
 .textbox {
     display: none;
@@ -78,4 +85,10 @@ h1 {
     display: block;
     visibility: visible;
     width:400px;
+}
+.key {
+    width:650px;
+    background-color: #E3DEDE;
+    border: 1px solid #000000;
+    margin: 0 auto;
 }
