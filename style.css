@@ -60,7 +60,20 @@ h1 {
     text-align: center;
     margin: 15%;
 }
-#courseload {
+
+.course-image {
     width: 650px;
-    height: auto;
+    height: 390px;
+}
+.textbox {
+    display: none;
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #000000;
+    visibility: hidden;
+}
+
+.coursebox:hover .textbox {
+    display: block;
+    visibility: visible;
 }
