@@ -5,22 +5,33 @@ body {
 section {
     margin: 7.5%;
 }
-div sec1 {
+.list-structure {
+    display: flex;
+    justify-content: space-between;
+}
+.listblock {
     padding: 10%;
     padding-top: 4%;
     padding-bottom: 0%;
+    width: 100%;
 }
-div {
+#search-bar {
     display: flex;
+    flex-direction: column;
+}
+#search-bar label {
+    margin-bottom: 10px;
+}
+#search-bar select {
+    margin-bottom: 10px;
+    width: 250px;
 }
 .centered-content {
     text-align: center;
     margin: 0 auto;
 }
-h1 {
-    font-size: xx-large;
-}
 .title {
+    font-size: xx-large;
     text-align: center;
     margin-top: 70px;
 }
@@ -51,6 +62,11 @@ h1 {
 .active {
     background-color: #0a4690;
 }
+.social-icons {
+    text-align: center;
+    margin: 15%;
+    margin-top: 5%;
+}
 .icon {
     display: inline-block;
     margin-left: auto;
@@ -59,18 +75,11 @@ h1 {
     height: auto;
     padding: 5px;
 }
-.smaller {
-    text-align: center;
-    margin: 15%;
-    margin-top: 5%;
-}
-
 .course-image {
     width: 650px;
     height: 390px;
     border: 1px solid #000000;
     margin: 0 auto;
-
 }
 .textbox {
     display: none;
@@ -87,7 +96,7 @@ h1 {
     visibility: visible;
     width:400px;
 }
-.key {
+.color-key {
     width:650px;
     background-color: #E3DEDE;
     border: 1px solid #000000;
