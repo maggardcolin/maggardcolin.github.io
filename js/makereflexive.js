@@ -33,9 +33,9 @@ function handleResize() {
         console.log("coursework");
         const courseMap = document.querySelector('.course-image');
         courseMap.style.display = isSmallWindow() ? 'none' : 'flex';
-        const colorKey = document.querySelector('.color-key');
+        const colorKey = document.querySelector('#color-key');
         colorKey.style.display = isSmallWindow() ? 'none' : 'flex';
-        const message = document.querySelector('.message');
+        const message = document.querySelector('#course-message');
         message.textContent = isSmallWindow()
         ? "Please increase your window size to be able to see the interactive course map."
         : "I created the above display by creating an HTML image map over a Sankey diagram and using JavaScript to move the textbox to match the user's mouse position.";
@@ -79,9 +79,9 @@ document.addEventListener('DOMContentLoaded', function () {
         if (title.textContent === "Interactive Course Map") {
             const courseMap = document.querySelector('.course-image');
             courseMap.style.display = 'none';
-            const colorKey = document.querySelector('.color-key');
+            const colorKey = document.querySelector('#color-key');
             colorKey.style.display = 'none';
-            const message = document.querySelector('.message');
+            const message = document.querySelector('#course-message');
             message.textContent = "This feature does not currently work on mobile devices. Please view this page on a desktop computer.";
         }
         

@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         // reorder within the section division
-        const section = document.querySelector('section');
+        const section = document.querySelector('.section');
         sortedProjects.forEach(project => {
             section.appendChild(project);
         });

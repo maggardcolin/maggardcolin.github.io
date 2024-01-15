@@ -2,7 +2,7 @@ body {
     background-color: blanchedalmond;
     margin:0;
 }
-section {
+.section {
     margin: 7.5%;
     margin-top: 0;
 }
@@ -107,7 +107,7 @@ section {
     visibility: visible;
     width:400px;
 }
-.color-key {
+#color-key {
     display: flex;
     width:650px;
     background-color: #E3DEDE;
