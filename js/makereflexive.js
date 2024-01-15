@@ -41,6 +41,12 @@ function handleResize() {
         const resultsButton = document.querySelector('.results');
         resultsButton.style.width = windowedMode() ? "50%": "400px";
     }
+    // navbar handling
+    navbarelements = document.querySelectorAll(".navbarelements");
+    navbarelements.forEach(element => {
+        element.style.fontSize = isSmallWindow() ? '10px' : '15px';
+        element.style.width = isSmallWindow() ? '75px' : '100px';
+    });
         
 }
 
@@ -55,9 +61,9 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log("Mobile device detected");
         const navbarelements = document.querySelectorAll('.navbarelements');
         navbarelements.forEach(navbarelement => {
-            navbarelement.style.width = '17%';
+            navbarelement.style.width = '75px';
             const anchorElement = navbarelement.querySelector('a');
-            anchorElement.style.fontSize = 'smaller';
+            anchorElement.style.fontSize = '10px';
         });
         const title = document.querySelector('.title');
         if (title.textContent === "Colin Maggard") {

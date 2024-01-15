@@ -45,7 +45,6 @@ function fadeElementsInOrder() {
     elements.forEach((element) => {
         element.style.opacity = 0;
     });
-    setTimeout(() => {}, 200);      
     if (title.textContent === "Colin Maggard") {
         elements.forEach((element, index) => {
             setTimeout(() => {
