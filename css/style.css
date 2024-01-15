@@ -12,9 +12,12 @@ section {
 }
 .listblock {
     padding: 10%;
-    padding-top: 4%;
+    padding-top: 0;
     padding-bottom: 0%;
     width: 100%;
+}
+#intro-paragraph {
+    padding-bottom: 4%;
 }
 #search-bar {
     display: flex;
