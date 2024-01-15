@@ -9,15 +9,12 @@ function windowedMode() {
     const threshold = 0.5 * screenWidth;
 
     // less than half of the max screen width, then set as columns
-    return (
-        (windowWidth < screenWidth - threshold)
-    );
+    return (windowWidth < screenWidth - threshold);
 }
 function isSmallWindow() {
-    // less than 750px and it will not show
-    return (
-        (window.innerWidth < 750)
-    );
+    // less than 750px wide or 450px tall and it will not show
+    return (window.innerWidth < 750) || (window.innerHeight < 450);
+    
 }
 function handleResize() {
     const title = document.querySelector('.title');
