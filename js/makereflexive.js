@@ -44,11 +44,16 @@ document.addEventListener('DOMContentLoaded', function () {
         if (title.textContent === "Colin Maggard") {
             const listStructure = document.querySelector('.list-structure');
             listStructure.style.flexDirection = 'column';
+            const listBlocks = listStructure.querySelectorAll('.listblock');
+            listBlocks.forEach(block => {
+                block.style.paddingLeft = '5%';
+                block.style.paddingRight = '5%';
+            });
         }
         if (title.textContent === "Experience" || title.textContent === "Projects") {
             const mobileButtons = document.querySelectorAll('.mobile-button');
             mobileButtons.forEach(button => {
-                button.style.width = "75%";
+                button.style.width = "285px";
             });
         }
         
