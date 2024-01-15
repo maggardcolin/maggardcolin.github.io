@@ -1,10 +1,44 @@
 body {
-    background-color: blanchedalmond;
+    background-color: #DDD0C8;
     margin:0;
 }
 .section {
     margin: 7.5%;
     margin-top: 0;
+}
+.title {
+    font-size: xx-large;
+    text-align: center;
+    color: #323232;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h2 {
+    color: #323232;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h3 {
+    color: #323232;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h4 {
+    color: #323232;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+p {
+    color: #323232;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+li {
+    color: #323232;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+button {
+    color: #323232;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+label, select, option {
+    color: #323232;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .list-structure {
     display: flex;
@@ -36,10 +70,6 @@ body {
 .centered-content {
     text-align: center;
     margin: 0 auto;
-}
-.title {
-    font-size: xx-large;
-    text-align: center;
 }
 .navbar {
     list-style-type: none;
@@ -91,6 +121,21 @@ body {
     height: 390px;
     border: 1px solid #000000;
     margin: 0 auto;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+#color-key {
+    display: flex;
+    width:650px;
+    background-color: #E3DEDE;
+    border: 1px solid #000000;
+    margin: 0 auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+#course-message {
+    font-size: small;
+    padding-top: 25px;
 }
 .textbox {
     display: none;
@@ -107,18 +152,15 @@ body {
     visibility: visible;
     width:400px;
 }
-#color-key {
-    display: flex;
-    width:650px;
-    background-color: #E3DEDE;
-    border: 1px solid #000000;
-    margin: 0 auto;
-}
 .project {
     margin-bottom: 3%;
     padding: 2%;
     border: 1px solid #000000;
+    border-radius: 20px;
     background-color: #bbb;
+}
+.project:hover {
+    background-color: #d4d4d4;
 }
 .results-button {
     text-align: center;
