@@ -86,6 +86,7 @@ section {
     padding: 5px;
 }
 .course-image {
+    display: flex;
     width: 650px;
     height: 390px;
     border: 1px solid #000000;
@@ -107,6 +108,7 @@ section {
     width:400px;
 }
 .color-key {
+    display: flex;
     width:650px;
     background-color: #E3DEDE;
     border: 1px solid #000000;

@@ -13,12 +13,33 @@ function windowedMode() {
         (windowWidth < screenWidth - threshold)
     );
 }
+function isSmallWindow() {
+    // less than 750px and it will not show
+    return (
+        (window.innerWidth < 750)
+    );
+}
 function handleResize() {
     const title = document.querySelector('.title');
     if (title.textContent === "Colin Maggard") {
         const listStructure = document.querySelector('.list-structure');
         listStructure.style.flexDirection = windowedMode() ? 'column' : ''; 
-    } else {
+        const listBlocks = listStructure.querySelectorAll('.listblock');
+            listBlocks.forEach(block => {
+                block.style.paddingLeft = windowedMode() ? '4%' : '10%';
+                block.style.paddingRight = windowedMode() ? '4%' : '10%';
+            });
+    } else if (title.textContent === "Interactive Course Map") {
+        console.log("coursework");
+        const courseMap = document.querySelector('.course-image');
+        courseMap.style.display = isSmallWindow() ? 'none' : 'flex';
+        const colorKey = document.querySelector('.color-key');
+        colorKey.style.display = isSmallWindow() ? 'none' : 'flex';
+        const message = document.querySelector('.message');
+        message.textContent = isSmallWindow()
+        ? "Please increase your window size to be able to see the interactive course map."
+        : "I created the above display by creating an HTML image map over a Sankey diagram and using JavaScript to move the textbox to match the user's mouse position.";
+        } else {
         const resultsButton = document.querySelector('.results');
         resultsButton.style.width = windowedMode() ? "50%": "400px";
     }
@@ -28,7 +49,7 @@ function handleResize() {
 document.addEventListener('DOMContentLoaded', function () {
     if (!isMobile()) {
         const title = document.querySelector('.title');
-        if (title.textContent === "Colin Maggard" || title.textContent === "Experience" || title.textContent === "Projects") {
+        if (title.textContent === "Colin Maggard" || title.textContent === "Experience" || title.textContent === "Projects" || title.textContent === "Interactive Course Map") {
             window.addEventListener('resize', handleResize);
             handleResize();
         }
@@ -54,6 +75,14 @@ document.addEventListener('DOMContentLoaded', function () {
             const resultsButton = document.querySelector('.results');
             resultsButton.style.width = "285px";
             resultsButton.style.marginBottom = '5%';
+        }
+        if (title.textContent === "Interactive Course Map") {
+            const courseMap = document.querySelector('.course-image');
+            courseMap.style.display = 'none';
+            const colorKey = document.querySelector('.color-key');
+            colorKey.style.display = 'none';
+            const message = document.querySelector('.message');
+            message.textContent = "This feature does not currently work on mobile devices. Please view on a desktop computer";
         }
         
     }
