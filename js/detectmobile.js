@@ -9,6 +9,7 @@ function isMobile() {
     const navbar = document.querySelectorAll('.project');
     navbar.forEach(navbarelement => {
         navbarelement.style.width = 10 + '%';
+        navbarelement.style.color = "#FF0000";
     });
   } else {
     console.log("Desktop device detected");
