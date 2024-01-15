@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log("Desktop device detected");
         const navbarelements = document.querySelectorAll('.navbarelements');
         navbarelements.forEach(navbarelement => {
-            navbarelement.style.width = '20%';
+            navbarelement.style.width = '17%';
             const anchorElement = navbarelement.querySelector('a');
             anchorElement.style.fontSize = 'smaller';
 
