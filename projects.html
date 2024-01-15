@@ -20,114 +20,112 @@
             <li class="navbarelements"><a href="coursework.html">Coursework</a></li>
             <li class="navbarelements"><a href="contact.html">Contact</a></li>
         </ul>
-    <section>
+        <section class="content-body">  
+            <h1 class="title">Projects</h1>
+            <div id="search-bar">
+                <label for="filter-option">Filter by Language:</label>
+                <select id="filter-option">
+                    <option value="all">All Languages</option>
+                    <option value="javaproject">Java</option>
+                    <option value="hdlproject">HDL</option>
+                    <option value="pythonproject">Python</option>
+                </select>
         
-        <h1 class="title">Projects</h1>
+                <label for="sort-order">Sort Order:</label>
+                <select id="sort-order">
+                    <option value="relevance">Relevance</option>
+                    <option value="descending">Most Recent First</option>
+                    <option value="ascending">Oldest First</option>
+                </select>
+            </div>
 
-        <div id="search-bar">
-            <label for="filter-option">Filter by Language:</label>
-            <select id="filter-option">
-                <option value="all">All Languages</option>
-                <option value="javaproject">Java</option>
-                <option value="hdlproject">HDL</option>
-                <option value="pythonproject">Python</option>
-            </select>
-    
-            <label for="sort-order">Sort Order:</label>
-            <select id="sort-order">
-                <option value="relevance">Relevance</option>
-                <option value="descending">Most Recent First</option>
-                <option value="ascending">Oldest First</option>
-            </select>
-        </div>
+            <div class="project javaproject" chron-order="4" relevance="1">
+                <h2><a href=https://github.com/maggardcolin/gofish>GoFish - Java</a></h2>
+                <h3>Main focus: Artificial intelligence</h3>
+                <p>The goal of this app was to create a GoFish-like game that a user plays against a computer.
+                    This computer can remember which cards the player asks for that it does not have at the time, 
+                    and will also remember which cards it has already asked for that the player does not have (to its knowledge).
+                    The computer will ask if you have cards in this order: cards that it knows you have that it also has, cards that
+                    it has that it hasn't asked you for already, then finally cards that it has that it has already asked for. I created this project 
+                    in December 2023 and would describe this as a very basic AI project due to the computer player having the ability to make intelligent decisions that 
+                    aren't entirely based on random chance.
+                </p>
+                <h3>How it works</h3>
+                <p>Each player has a hand, as well as a point total that is updated each time a pair is made. The deck/pond and each of these 
+                    hands use ArrayLists to store the Card objects. There is a method that checks a player's hand for pairs, and with the aforementioned 
+                    computer logic, it is possible to play a full game against the computer. This game follows what I would consider to be 
+                    standard rules for GoFish, but individual rules are not difficult to implement and I may consider adding a way to change them, such as 
+                    the number of cards drawn when your hand is empty, or using 4-of-a-kinds instead of pairs for points.
+                </p>
+            </div>
 
-        <div class="project javaproject" chron-order="4" relevance="1">
-            <h2><a href=https://github.com/maggardcolin/gofish>GoFish - Java</a></h2>
-            <h3>Main focus: Artificial intelligence</h3>
-            <p>The goal of this app was to create a GoFish-like game that a user plays against a computer.
-                This computer can remember which cards the player asks for that it does not have at the time, 
-                and will also remember which cards it has already asked for that the player does not have (to its knowledge).
-                The computer will ask if you have cards in this order: cards that it knows you have that it also has, cards that
-                it has that it hasn't asked you for already, then finally cards that it has that it has already asked for. I created this project 
-                in December 2023 and would describe this as a very basic AI project due to the computer player having the ability to make intelligent decisions that 
-                aren't entirely based on random chance.
-            </p>
-            <h3>How it works</h3>
-            <p>Each player has a hand, as well as a point total that is updated each time a pair is made. The deck/pond and each of these 
-                hands use ArrayLists to store the Card objects. There is a method that checks a player's hand for pairs, and with the aforementioned 
-                computer logic, it is possible to play a full game against the computer. This game follows what I would consider to be 
-                standard rules for GoFish, but individual rules are not difficult to implement and I may consider adding a way to change them, such as 
-                the number of cards drawn when your hand is empty, or using 4-of-a-kinds instead of pairs for points.
-            </p>
-        </div>
+            <div class="project javaproject" chron-order="5" relevance="2">
+                <h2><a href=https://github.com/maggardcolin/inventorymanagement>Inventory Management - Java</a></h2>
+                <h3>Main focus: Database manipulation</h3>
+                <p>The goal of this app was to create a system that allows a user to view and modify a database containing items with various attributes. The user is able to 
+                    add or remove items, restock and sell items.
+                </p>
+                <h3>How it works</h3>
+                <p>I stored each of the items as well as a "sales" value into a csv file, which is loaded upon the app being run. Each item is then split from the csv file and placed
+                    into an ArrayList. This ArrayList is able to be modified by commands specified by the user, and once these commands are run, the csv file is overwritten in the same format that 
+                    it was originally in.
+                </p>
+            </div>
 
-        <div class="project javaproject" chron-order="5" relevance="2">
-            <h2><a href=https://github.com/maggardcolin/inventorymanagement>Inventory Management - Java</a></h2>
-            <h3>Main focus: Database manipulation</h3>
-            <p>The goal of this app was to create a system that allows a user to view and modify a database containing items with various attributes. The user is able to 
-                add or remove items, restock and sell items.
-            </p>
-            <h3>How it works</h3>
-            <p>I stored each of the items as well as a "sales" value into a csv file, which is loaded upon the app being run. Each item is then split from the csv file and placed
-                into an ArrayList. This ArrayList is able to be modified by commands specified by the user, and once these commands are run, the csv file is overwritten in the same format that 
-                it was originally in.
-            </p>
-        </div>
+            <div class="project javaproject" chron-order="3" relevance="3">
+                <h2><a href=https://github.com/maggardcolin/secretsanta>Secret Santa App - Java</a></h2>
+                <h3>Main focus: Hashmaps</h3>
+                <p>
+                    The goal for this app was to create an app that would match
+                    each name with a different name, while avoiding someone's name being
+                    matched to themselves (for a secret santa gift exchange). I implemented this 
+                    using a hashmap class that I developed in my CS400 class in Fall 2023, and created 
+                    JUnit tests that made sure that the output was as expected. This project utilized the 
+                    programming concepts that I was learning in my class at the time, including hashmaps, 
+                    circular indices, and frontend/backend development.
+                </p>
+                <h3>How it works</h3>
+                <p>
+                    The app prompts the user for how many people are participating in 
+                    the secret santa gift exchange, then for the names of each of the users. It then
+                    sequentially assigns each user a different name, and restarts the entire process if anyone's name
+                    is matched to themselves. I stored each name pair in a hashmap and checked to see if the name pair
+                    existed already to determine if the process should be run again. I am also planning on implementing 
+                    file output options in the code so that the names are not revealed.
+                </p>
+            </div>
 
-        <div class="project javaproject" chron-order="3" relevance="3">
-            <h2><a href=https://github.com/maggardcolin/secretsanta>Secret Santa App - Java</a></h2>
-            <h3>Main focus: Hashmaps</h3>
-            <p>
-                The goal for this app was to create an app that would match
-                each name with a different name, while avoiding someone's name being
-                matched to themselves (for a secret santa gift exchange). I implemented this 
-                using a hashmap class that I developed in my CS400 class in Fall 2023, and created 
-                JUnit tests that made sure that the output was as expected. This project utilized the 
-                programming concepts that I was learning in my class at the time, including hashmaps, 
-                circular indices, and frontend/backend development.
-            </p>
-            <h3>How it works</h3>
-            <p>
-                The app prompts the user for how many people are participating in 
-                the secret santa gift exchange, then for the names of each of the users. It then
-                sequentially assigns each user a different name, and restarts the entire process if anyone's name
-                is matched to themselves. I stored each name pair in a hashmap and checked to see if the name pair
-                existed already to determine if the process should be run again. I am also planning on implementing 
-                file output options in the code so that the names are not revealed.
-            </p>
-        </div>
+            <div class="project hdlproject" chron-order="2" relevance="4">
+                <h2>Pong Game - Verilog (created in ECE 352)</h2>
+                <h3>Main focus: Digital system design</h3>
+                <p>
+                    Collaborated effectively with a partner to use Verilog to program a Field Programmable Gate Array (FPGA) using Intel Quartus Prime. Created and 
+                    implemented a finite state machine that allowed two players to play a timing-sensitive game of Pong on a FPGA. Scores were updated using internal Boolean  
+                    logic and displayed on a set of 7-segment displays. Player input, reset, and pause functionality were implemented through use of switches on FPGA board.
+                    Used testbench programs in Verilog to simulate and record output of the program under various conditions.
+                </p>
+            </div>
 
-        <div class="project hdlproject" chron-order="2" relevance="4">
-            <h2>Pong Game - Verilog (created in ECE 352)</h2>
-            <h3>Main focus: Digital system design</h3>
-            <p>
-                Collaborated effectively with a partner to use Verilog to program a Field Programmable Gate Array (FPGA) using Intel Quartus Prime. Created and 
-                implemented a finite state machine that allowed two players to play a timing-sensitive game of Pong on a FPGA. Scores were updated using internal Boolean  
-                logic and displayed on a set of 7-segment displays. Player input, reset, and pause functionality were implemented through use of switches on FPGA board.
-                Used testbench programs in Verilog to simulate and record output of the program under various conditions.
-            </p>
-        </div>
-
-        <div class="project pythonproject" chron-order="1" relevance="5">
-            <h2><a href=https://github.com/maggardcolin/data-generator>Statistical Data Generator App - Python</a></h2>
-            <h3>Main focus: Application of random walks</h3>
-            <p>
-                The goal for this app was to create a program that would generate a set of numbers that correspond to 
-                a user-specified set of statistical parameters, namely mean and standard deviation. This program has options to
-                control the number of decimal places (precision), number of points generated, and maximum amount error permissible.
-                I created this project in Spring 2022 and it was partially because of my work on this project that I became interested 
-                in programming and going to school for it.
-            </p>
-            <h3>How it works</h3>
-            <p>
-                This program prompts the user for their intended average, standard deviation, number of data points, precision and maximum permissible error, 
-                then makes a few intermediary calculations in order to be able to supply the random.randint() function with integer values based on the number of 
-                decimal places desired. The main loop body starts off by determining the "differential" of the point, that is, how far off it is from the desired mean 
-                value. It then adds in any factors to be considered from the previous iterations of the loop, if any, and then updates a value called "leftovers" that 
-                represents the amount of "pull" we need in order to "balance" the data points around the desired mean. The created point is then appended to an array of numbers 
-                and the program repeats until all data points are created.
-            </p>
-        </div>
-    </section>
+            <div class="project pythonproject" chron-order="1" relevance="5">
+                <h2><a href=https://github.com/maggardcolin/data-generator>Statistical Data Generator App - Python</a></h2>
+                <h3>Main focus: Application of random walks</h3>
+                <p>
+                    The goal for this app was to create a program that would generate a set of numbers that correspond to 
+                    a user-specified set of statistical parameters, namely mean and standard deviation. This program has options to
+                    control the number of decimal places (precision), number of points generated, and maximum amount error permissible.
+                    I created this project in Spring 2022 and it was partially because of my work on this project that I became interested 
+                    in programming and going to school for it.
+                </p>
+                <h3>How it works</h3>
+                <p>
+                    This program prompts the user for their intended average, standard deviation, number of data points, precision and maximum permissible error, 
+                    then makes a few intermediary calculations in order to be able to supply the random.randint() function with integer values based on the number of 
+                    decimal places desired. The main loop body starts off by determining the "differential" of the point, that is, how far off it is from the desired mean 
+                    value. It then adds in any factors to be considered from the previous iterations of the loop, if any, and then updates a value called "leftovers" that 
+                    represents the amount of "pull" we need in order to "balance" the data points around the desired mean. The created point is then appended to an array of numbers 
+                    and the program repeats until all data points are created.
+                </p>
+            </div>
+        </section>
     </body>
 </html>

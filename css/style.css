@@ -4,6 +4,7 @@ body {
 }
 section {
     margin: 7.5%;
+    margin-top: 0;
 }
 .list-structure {
     display: flex;
@@ -62,6 +63,9 @@ section {
 }
 .active {
     background-color: #0a4690;
+}
+.content-body {
+    margin-top: 75px;
 }
 .social-icons {
     text-align: center;
