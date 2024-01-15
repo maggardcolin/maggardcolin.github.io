@@ -46,8 +46,10 @@ document.addEventListener('DOMContentLoaded', function () {
             listStructure.style.flexDirection = 'column';
         }
         if (title.textContent === "Experience" || title.textContent === "Projects") {
-            const resultsButton = document.querySelector('.results');
-            resultsButton.style.width ="50%";
+            const mobileButtons = document.querySelectorAll('.mobile-button');
+            mobileButtons.forEach(button => {
+                button.style.width = "75%";
+            });
         }
         
     }
