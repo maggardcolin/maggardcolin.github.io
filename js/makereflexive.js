@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (title.textContent === "Experience" || title.textContent === "Projects") {
             const resultsButton = document.querySelector('.results');
             resultsButton.style.width = "285px";
+            resultsButton.style.marginBottom = '5%';
         }
         
     }
