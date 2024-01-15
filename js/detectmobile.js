@@ -6,17 +6,18 @@ function isMobile() {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Your existing code here
     if (!isMobile()) {
-        console.log("Mobile device detected");
     } else {
-        console.log("Desktop device detected");
+        console.log("Mobile device detected");
         const navbarelements = document.querySelectorAll('.navbarelements');
         navbarelements.forEach(navbarelement => {
             navbarelement.style.width = '17%';
             const anchorElement = navbarelement.querySelector('a');
             anchorElement.style.fontSize = 'smaller';
-
+        });
+        const contentBody = document.querySelectorAll('content-body');
+        contentBody.forEach(content => {
+            content.style.textAlign = 'center';
         });
     }
 });
