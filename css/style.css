@@ -23,9 +23,11 @@ section {
     display: flex;
     flex-direction: column;
     padding-bottom: 2%;
+    align-items: center;
 }
 #search-bar label {
     margin-bottom: 10px;
+    width: 285px;
 }
 #search-bar select {
     margin-bottom: 10px;
@@ -115,4 +117,14 @@ section {
     padding: 2%;
     border: 1px solid #000000;
     background-color: #bbb;
+}
+.results-button {
+    text-align: center;
+}
+.results {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 3%;
+    width: 400px;
+    display: inline-block;
 }

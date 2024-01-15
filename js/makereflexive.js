@@ -14,14 +14,24 @@ function windowedMode() {
     );
 }
 function handleResize() {
-    const listStructure = document.querySelector('.list-structure');
-    listStructure.style.flexDirection = windowedMode() ? 'column' : '';
+    const title = document.querySelector('.title');
+    if (title.textContent === "Colin Maggard") {
+        const listStructure = document.querySelector('.list-structure');
+        listStructure.style.flexDirection = windowedMode() ? 'column' : ''; 
+    } else {
+        const resultsButton = document.querySelector('.results');
+        resultsButton.style.width = windowedMode() ? "50%": "400px";
+    }
+        
 }
 
 document.addEventListener('DOMContentLoaded', function () {
     if (!isMobile()) {
-        window.addEventListener('resize', handleResize);
-        handleResize();
+        const title = document.querySelector('.title');
+        if (title.textContent === "Colin Maggard" || title.textContent === "Experience" || title.textContent === "Projects") {
+            window.addEventListener('resize', handleResize);
+            handleResize();
+        }
     } else {
         console.log("Mobile device detected");
         const navbarelements = document.querySelectorAll('.navbarelements');

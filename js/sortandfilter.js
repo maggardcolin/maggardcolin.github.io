@@ -2,16 +2,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // select all project boxes and the options of the two dropdowns
     const title = document.querySelector('.title');
+    const searchbar = document.getElementById('search-bar');
     const projects = document.querySelectorAll('.project');
     const affiliation = document.getElementById('affiliation');
+    const searchResults = document.querySelector('.results');
     let languageFilter = undefined;
     let completionStatus = undefined;
+    let option = "hide";
+    let count = 0;
+    let total = 0;
     if (title.textContent === "Projects") {
         languageFilter = document.getElementById('filter-option');
         completionStatus = document.getElementById('completion-status');
     }
     const sortOrder = document.getElementById('sort-order');
     
+    searchResults.addEventListener('click', changeButton);
     affiliation.addEventListener('change', filterProjects);
     sortOrder.addEventListener('change', filterProjects);
     if (title.textContent === "Projects") {
@@ -21,25 +27,30 @@ document.addEventListener("DOMContentLoaded", function() {
     
     function filterProjects() {
         const selectedSortOrder = sortOrder.value;
-
+        count = 0;
+        total = 0;
         // show a given project if all is selected or if its language class is
         if (title.textContent === "Projects") {
             const selectedLanguage = languageFilter.value;
             const selectedCompletionStatus = completionStatus.value;
             const selectedAffiliation = affiliation.value;
             projects.forEach(project => {
+                total += 1;
                 const language = selectedLanguage === 'all' || project.classList.contains(selectedLanguage);
                 const status = selectedCompletionStatus === 'all' || project.classList.contains(selectedCompletionStatus);
                 const affiliationtype = selectedAffiliation === 'all' || project.classList.contains(selectedAffiliation);
                 const isVisible = language && status && affiliationtype;
                 project.style.display = isVisible ? 'block' : 'none';
+                count += isVisible ? 1 : 0;
             });
         } else if (title.textContent === "Experience") {
             const selectedAffiliation = affiliation.value;
             projects.forEach(project => {
+                total += 1;
                 const affiliationtype = selectedAffiliation === 'all' || project.classList.contains(selectedAffiliation);
                 const isVisible = affiliationtype;
                 project.style.display = isVisible ? 'block' : 'none';
+                count += isVisible ? 1 : 0;
             });
         } else {
             console.log("error");
@@ -67,7 +78,20 @@ document.addEventListener("DOMContentLoaded", function() {
         sortedProjects.forEach(project => {
             section.appendChild(project);
         });
+
+        searchResults.textContent = `Showing  ${count} out of ${total} results. (Press to ${option} advanced search)`;
+
     }
 
     filterProjects();
+
+    function changeButton() {
+        option = (option === "hide") ? "show": "hide";
+        if (option === "hide") {
+            searchbar.style.display = 'flex';
+        } else {
+            searchbar.style.display = 'none';
+        }
+        searchResults.textContent = `Showing  ${count} out of ${total} results. (Press to ${option} advanced search)`;
+    }
 });
