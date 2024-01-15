@@ -3,15 +3,21 @@ function isMobile() {
     const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
     return regex.test(navigator.userAgent);
   }
-  
-  if (isMobile()) {
-    console.log("Mobile device detected");
-    const navbarelements = document.querySelectorAll('.navbarelements');
-    navbarelements.forEach(navbarelement => {
-        const anchorElement = navbarelement.querySelector('a');
-        anchorElement.style.width = '10%';
-        anchorElement.style.color = "#FF0000";
-    });
-  } else {
-    console.log("Desktop device detected");
-  }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Your existing code here
+    if (!isMobile()) {
+        console.log("Mobile device detected");
+    } else {
+        console.log("Desktop device detected");
+        const navbarelements = document.querySelectorAll('.navbarelements');
+        navbarelements.forEach(navbarelement => {
+            navbarelement.style.width = '15%';
+            const anchorElement = navbarelement.querySelector('a');
+            anchorElement.style.color = 'red';
+            anchorElement.style.fontSize = 'smaller';
+
+        });
+    }
+});
