@@ -1,69 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-22L0MR3QPQ"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-22L0MR3QPQ');
-        </script>
-        
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-
-                // select all project boxes and the options of the two dropdowns
-                const projects = document.querySelectorAll('.project');
-                const languageFilter = document.getElementById('language-filter');
-                const sortOrder = document.getElementById('sort-order');
-        
-                function filterProjects() {
-                    const selectedLanguage = languageFilter.value;
-                    const selectedSortOrder = sortOrder.value;
-        
-                    // show a given project if all is selected or if its language class is
-                    projects.forEach(project => {
-                        const language = project.classList.contains(selectedLanguage);
-                        const isVisible = selectedLanguage === 'all' || language;
-                        project.style.display = isVisible ? 'block' : 'none';
-                    });
-        
-                    // sort projects based on specified order
-                    const sortedProjects = Array.from(projects).sort((a, b) => {
-                        
-                        if (selectedSortOrder === 'ascending' || selectedSortOrder === 'descending') {
-                            const orderA = parseInt(a.getAttribute('chron-order'));
-                            const orderB = parseInt(b.getAttribute('chron-order'));     
-                            return selectedSortOrder === 'ascending' ? orderA - orderB : orderB - orderA;
-                        } else {
-                            const orderA = parseInt(a.getAttribute('relevance'));
-                            const orderB = parseInt(b.getAttribute('relevance'));     
-                            return orderA - orderB;
-                        }
-                    });
-        
-                    // reorder within the section division
-                    const section = document.querySelector('section');
-                    sortedProjects.forEach(project => {
-                        section.appendChild(project);
-                    });
-                }
-        
-                languageFilter.addEventListener('change', filterProjects);
-                sortOrder.addEventListener('change', filterProjects);
-        
-                filterProjects();
-            });
-        </script>
-        
+        <script src="../js/googletag.js"></script>    
+        <script src="../js/sortandfilter.js"></script>
         <title>Maggard Portfolio</title>
         <meta name=author content= "Colin Maggard">
         <meta keywords="Portfolio, Resume, Job, Internship">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="images/favicon.png" type="image/png">
-        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="../images/favicon.png" type="image/png">
+        <link rel="stylesheet" href="../css/style.css">
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
     </head>
     <body>

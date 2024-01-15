@@ -1,41 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-22L0MR3QPQ"></script>
-        
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-22L0MR3QPQ');
-        </script>        
-        
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const courseBoxes = document.querySelectorAll(".coursebox");
-    
-                courseBoxes.forEach((courseBox) => {
-                    courseBox.addEventListener("mousemove", (event) => {
-                        const textbox = courseBox.querySelector(".textbox");
-    
-                        const mouseX = event.clientX + 5 + window.scrollX;
-                        const mouseY = event.clientY + window.scrollY;
-    
-                        textbox.style.left = mouseX + "px";
-                        textbox.style.top = mouseY + "px";
-                    });
-                });
-            });
-        </script>
-
+        <script src="../js/googletag.js"></script>        
+        <script src="../js/movetextbox.js"></script>
         <title>Maggard Portfolio</title>
         <meta name=author content= "Colin Maggard">
         <meta keywords="Portfolio, Resume, Job, Internship">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="images/favicon.png" type="image/png">
-        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="../images/favicon.png" type="image/png">
+        <link rel="stylesheet" href="../css/style.css">
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
@@ -72,7 +46,7 @@
             </div>
 
             <div>
-                <img src="images/courseloadoutsp24.png" alt="Course Loadout SP24" class="course-image" usemap="#image-map">
+                <img src="../images/courseloadoutsp24.png" alt="Course Loadout SP24" class="course-image" usemap="#image-map">
                 <map name="image-map">
                     <coursebox class="coursebox">
                         <area target="_self" alt="ECE 203" coords="29,292,76,311" shape="rect">
