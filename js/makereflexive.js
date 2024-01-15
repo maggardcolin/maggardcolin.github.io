@@ -51,10 +51,8 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
         if (title.textContent === "Experience" || title.textContent === "Projects") {
-            const mobileButtons = document.querySelectorAll('.mobile-button');
-            mobileButtons.forEach(button => {
-                button.style.width = "285px";
-            });
+            const resultsButton = document.querySelectorAll('.results');
+            resultsButton.style.width = "285px";
         }
         
     }
