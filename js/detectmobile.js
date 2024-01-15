@@ -4,7 +4,6 @@ function isMobile() {
     return regex.test(navigator.userAgent);
   }
 
-
 document.addEventListener('DOMContentLoaded', function () {
     if (!isMobile()) {
     } else {
@@ -15,9 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const anchorElement = navbarelement.querySelector('a');
             anchorElement.style.fontSize = 'smaller';
         });
-        const contentBody = document.querySelectorAll('content-body');
-        contentBody.forEach(content => {
-            content.style.textAlign = 'center';
-        });
+        const listStructure = document.querySelector('.list-structure');
+        listStructure.style.flexDirection = 'column';
     }
 });
