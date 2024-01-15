@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         const title = document.querySelector('.title');
         if (title.textContent === "Colin Maggard") {
+            listStructure.style.display = 'flex';
             const listStructure = document.querySelector('.list-structure');
             listStructure.style.flexDirection = 'column';
             const listBlocks = listStructure.querySelectorAll('.listblock');

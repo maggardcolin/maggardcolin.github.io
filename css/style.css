@@ -45,6 +45,7 @@ label, select, option {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
+    padding-bottom: 35px;
 }
 .list-structure a {
     text-decoration: none;
@@ -114,9 +115,10 @@ label, select, option {
     background-color: #0a4690;
 }
 .footer {
-    position: fixed;
     margin: 0;
     padding: 0;
+    padding-bottom: 10px;
+    text-align: center;
 }
 .content-body {
     margin-top: 75px;
@@ -157,7 +159,8 @@ label, select, option {
 }
 #course-message {
     font-size: small;
-    padding-top: 25px;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 .textbox {
     display: none;
