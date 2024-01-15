@@ -28,8 +28,18 @@
                 <select id="filter-option">
                     <option value="all">All Languages</option>
                     <option value="javaproject">Java</option>
-                    <option value="hdlproject">HDL</option>
+                    <option value="hdlproject">Hardware Design Languages</option>
                     <option value="pythonproject">Python</option>
+                    <option value="htmlproject">HTML/CSS</option>
+                    <option value="javascriptproject">JavaScript</option>
+                </select>
+
+                <label for="completion-status">Completion Status:</label>
+                <select id="completion-status">
+                    <option value="all">All Projects</option>
+                    <option value="workingon">Project works, continuing to make changes</option>
+                    <option value="completed">Project works, no longer working on</option>
+                    <option value="inprogress">Still in progress</option>
                 </select>
         
                 <label for="sort-order">Sort Order:</label>
@@ -40,7 +50,7 @@
                 </select>
             </div>
 
-            <div class="project javaproject" chron-order="4" relevance="1">
+            <div class="project javaproject completed" chron-order="4" relevance="1">
                 <h2><a href=https://github.com/maggardcolin/gofish>GoFish - Java</a></h2>
                 <h3>Main focus: Artificial intelligence</h3>
                 <p>The goal of this app was to create a GoFish-like game that a user plays against a computer.
@@ -60,7 +70,35 @@
                 </p>
             </div>
 
-            <div class="project javaproject" chron-order="5" relevance="2">
+            <div class="project htmlproject javascriptproject workingon" chron-order="5" relevance="2">
+                <h2>Portfolio Website - HTML/CSS/JavaScript</h2>
+                <h3>Main focus: Web design</h3>
+                <p>
+                    My main focus for this project was to become more comfortable with web design and scripting. My projects and 
+                    experience pages include a filtering and sorting system that I developed using JavaScript, and my coursework page 
+                    includes an interactive course map that I created using an HTML image map over a 
+                    <a href="https://sankeymatic.com/build/">Sankey diagram</a>. I also spent time making this website reflexive so that 
+                    it updates appropriately on different devices and resolutions. After this project, I am more comfortable with web design, 
+                    and I am planning on learning and implementing other web technologies in the future to this website and others.
+                </p>
+                <h3>How the Interactive Course Map works</h3>
+                <p>
+                    I used the HTML attribute "usemap" on a Sankey diagram that I created manually, and assigned a division of the class ".coursebox" 
+                    to each class that I took, which has an associated description with it. Each coursebox is manually placed using coordinates 
+                    onto the image, and the textbox associated with each coursebox is not visible unless the coursebox is hovered over. 
+                    I also used JavaScript to update the CSS for the textbox to make it follow the user's mouse when it is over the associated 
+                    coursebox.
+                </p>
+                <h3>How the sorting and filtering options on this page work</h3>
+                <p>
+                    I assigned each project box the class ".project" as well as various classes and attributes that describe what type of 
+                    project it is. Using JavaScript, I set it up so that each time the values are updated (or the page is loaded), 
+                    the order of the boxes and which are displayed is updated according to whatever is input into the dropdown boxes. 
+                    The project boxes are not visible unless their language is selected, and they are sorted by certain values if necessary.
+                </p>
+            </div>
+
+            <div class="project javaproject completed" chron-order="6" relevance="3">
                 <h2><a href=https://github.com/maggardcolin/inventorymanagement>Inventory Management - Java</a></h2>
                 <h3>Main focus: Database manipulation</h3>
                 <p>The goal of this app was to create a system that allows a user to view and modify a database containing items with various attributes. The user is able to 
@@ -73,7 +111,7 @@
                 </p>
             </div>
 
-            <div class="project javaproject" chron-order="3" relevance="3">
+            <div class="project javaproject workingon" chron-order="3" relevance="4">
                 <h2><a href=https://github.com/maggardcolin/secretsanta>Secret Santa App - Java</a></h2>
                 <h3>Main focus: Hashmaps</h3>
                 <p>
@@ -96,7 +134,7 @@
                 </p>
             </div>
 
-            <div class="project hdlproject" chron-order="2" relevance="4">
+            <div class="project hdlproject completed" chron-order="2" relevance="5">
                 <h2>Pong Game - Verilog (created in ECE 352)</h2>
                 <h3>Main focus: Digital system design</h3>
                 <p>
@@ -107,7 +145,7 @@
                 </p>
             </div>
 
-            <div class="project pythonproject" chron-order="1" relevance="5">
+            <div class="project pythonproject completed" chron-order="1" relevance="6">
                 <h2><a href=https://github.com/maggardcolin/data-generator>Statistical Data Generator App - Python</a></h2>
                 <h3>Main focus: Application of random walks</h3>
                 <p>

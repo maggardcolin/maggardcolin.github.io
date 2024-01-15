@@ -3,16 +3,19 @@ document.addEventListener("DOMContentLoaded", function() {
     // select all project boxes and the options of the two dropdowns
     const projects = document.querySelectorAll('.project');
     const languageFilter = document.getElementById('filter-option');
+    const completionStatus = document.getElementById('completion-status');
     const sortOrder = document.getElementById('sort-order');
 
     function filterProjects() {
         const selectedLanguage = languageFilter.value;
+        const selectedCompletionStatus = completionStatus.value;
         const selectedSortOrder = sortOrder.value;
 
         // show a given project if all is selected or if its language class is
         projects.forEach(project => {
             const language = project.classList.contains(selectedLanguage);
-            const isVisible = selectedLanguage === 'all' || language;
+            const status = project.classList.contains(selectedCompletionStatus);
+            const isVisible = (selectedLanguage === 'all' || language) && (selectedCompletionStatus === 'all' || status);
             project.style.display = isVisible ? 'block' : 'none';
         });
 
@@ -38,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     languageFilter.addEventListener('change', filterProjects);
+    completionStatus.addEventListener('change', filterProjects);
     sortOrder.addEventListener('change', filterProjects);
 
     filterProjects();
