@@ -8,8 +8,9 @@ function isMobile() {
     console.log("Mobile device detected");
     const navbarelements = document.querySelectorAll('.navbarelements');
     navbarelements.forEach(navbarelement => {
-        navbarelement.style.width = '10%';
-        navbarelement.style.color = "#FF0000";
+        const anchorElement = navbarelement.querySelector('a');
+        anchorElement.style.width = '10%';
+        anchorElement.style.color = "#FF0000";
     });
   } else {
     console.log("Desktop device detected");
