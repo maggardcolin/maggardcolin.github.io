@@ -20,11 +20,12 @@ function handleResize() {
     const title = document.querySelector('.title');
     if (title.textContent === "Colin Maggard") {
         const listStructure = document.querySelector('.list-structure');
+        listStructure.style.display = windowedMode() ? 'flex' : 'grid';
         listStructure.style.flexDirection = windowedMode() ? 'column' : ''; 
         const listBlocks = listStructure.querySelectorAll('.listblock');
             listBlocks.forEach(block => {
-                block.style.paddingLeft = windowedMode() ? '4%' : '10%';
-                block.style.paddingRight = windowedMode() ? '4%' : '10%';
+                block.style.paddingLeft = windowedMode() ? '4%' : '15%';
+                block.style.paddingRight = windowedMode() ? '4%' : '15%';
             });
     } else if (title.textContent === "Interactive Course Map") {
         console.log("coursework");

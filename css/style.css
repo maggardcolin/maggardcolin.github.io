@@ -41,14 +41,24 @@ label, select, option {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .list-structure {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
 }
+.list-structure a {
+    text-decoration: none;
+}
 .listblock {
-    padding: 10%;
     padding-top: 0;
-    padding-bottom: 0%;
-    width: 100%;
+    padding-bottom: 0;
+    height: 100%;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    background-color: #bbb;
+    display: block;
+}
+.listblock:hover {
+    background-color: #d4d4d4;
 }
 #intro-paragraph {
     padding-bottom: 4%;
@@ -161,6 +171,7 @@ label, select, option {
     border: 1px solid #000000;
     border-radius: 20px;
     background-color: #bbb;
+    text-decoration: none;
 }
 .project:hover {
     background-color: #d4d4d4;
