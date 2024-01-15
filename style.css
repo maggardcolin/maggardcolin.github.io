@@ -18,6 +18,7 @@ section {
 #search-bar {
     display: flex;
     flex-direction: column;
+    padding-bottom: 2%;
 }
 #search-bar label {
     margin-bottom: 10px;
@@ -101,4 +102,10 @@ section {
     background-color: #E3DEDE;
     border: 1px solid #000000;
     margin: 0 auto;
+}
+.project {
+    margin-bottom: 3%;
+    padding: 2%;
+    border: 1px solid #000000;
+    background-color: #bbb;
 }

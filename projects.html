@@ -32,10 +32,16 @@
         
                     // sort projects based on specified order
                     const sortedProjects = Array.from(projects).sort((a, b) => {
-                        const orderA = parseInt(a.getAttribute('chron-order'));
-                        const orderB = parseInt(b.getAttribute('chron-order'));
-        
-                        return selectedSortOrder === 'ascending' ? orderA - orderB : orderB - orderA;
+                        
+                        if (selectedSortOrder === 'ascending' || selectedSortOrder === 'descending') {
+                            const orderA = parseInt(a.getAttribute('chron-order'));
+                            const orderB = parseInt(b.getAttribute('chron-order'));     
+                            return selectedSortOrder === 'ascending' ? orderA - orderB : orderB - orderA;
+                        } else {
+                            const orderA = parseInt(a.getAttribute('relevance'));
+                            const orderB = parseInt(b.getAttribute('relevance'));     
+                            return orderA - orderB;
+                        }
                     });
         
                     // reorder within the section division
@@ -56,6 +62,7 @@
         <meta name=author content= "Colin Maggard">
         <meta keywords="Portfolio, Resume, Job, Internship">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="images/favicon.png" type="image/png">
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
     </head>
@@ -81,12 +88,13 @@
     
             <label for="sort-order">Sort Order:</label>
             <select id="sort-order">
+                <option value="relevance">Relevance</option>
                 <option value="descending">Most Recent First</option>
                 <option value="ascending">Oldest First</option>
             </select>
         </div>
 
-        <div class="project javaproject" chron-order="4">
+        <div class="project javaproject" chron-order="4" relevance="1">
             <h2><a href=https://github.com/maggardcolin/gofish>GoFish - Java</a></h2>
             <h3>Main focus: Artificial intelligence</h3>
             <p>The goal of this app was to create a GoFish-like game that a user plays against a computer.
@@ -106,8 +114,8 @@
             </p>
         </div>
 
-        <div class="project javaproject" chron-order="5">
-            <h2><br><a href=https://github.com/maggardcolin/inventorymanagement>Inventory Management - Java</a></h2>
+        <div class="project javaproject" chron-order="5" relevance="2">
+            <h2><a href=https://github.com/maggardcolin/inventorymanagement>Inventory Management - Java</a></h2>
             <h3>Main focus: Database manipulation</h3>
             <p>The goal of this app was to create a system that allows a user to view and modify a database containing items with various attributes. The user is able to 
                 add or remove items, restock and sell items.
@@ -119,8 +127,8 @@
             </p>
         </div>
 
-        <div class="project javaproject" chron-order="3">
-            <h2><br><a href=https://github.com/maggardcolin/secretsanta>Secret Santa App - Java</a></h2>
+        <div class="project javaproject" chron-order="3" relevance="3">
+            <h2><a href=https://github.com/maggardcolin/secretsanta>Secret Santa App - Java</a></h2>
             <h3>Main focus: Hashmaps</h3>
             <p>
                 The goal for this app was to create an app that would match
@@ -137,13 +145,13 @@
                 the secret santa gift exchange, then for the names of each of the users. It then
                 sequentially assigns each user a different name, and restarts the entire process if anyone's name
                 is matched to themselves. I stored each name pair in a hashmap and checked to see if the name pair
-                existed already to determine if the process should be run again. I have a demonstration on what potential 
-                output may look like below, and also file output options in the code so that the names are not revealed.
+                existed already to determine if the process should be run again. I am also planning on implementing 
+                file output options in the code so that the names are not revealed.
             </p>
         </div>
 
-        <div class="project hdlproject" chron-order="2">
-            <h2><br>Pong Game - Verilog (created in ECE 352)</h2>
+        <div class="project hdlproject" chron-order="2" relevance="4">
+            <h2>Pong Game - Verilog (created in ECE 352)</h2>
             <h3>Main focus: Digital system design</h3>
             <p>
                 Collaborated effectively with a partner to use Verilog to program a Field Programmable Gate Array (FPGA) using Intel Quartus Prime. Created and 
@@ -153,8 +161,8 @@
             </p>
         </div>
 
-        <div class="project pythonproject" chron-order="1">
-            <h2><br><a href=https://github.com/maggardcolin/data-generator>Statistical Data Generator App - Python</a></h2>
+        <div class="project pythonproject" chron-order="1" relevance="5">
+            <h2><a href=https://github.com/maggardcolin/data-generator>Statistical Data Generator App - Python</a></h2>
             <h3>Main focus: Application of random walks</h3>
             <p>
                 The goal for this app was to create a program that would generate a set of numbers that correspond to 
