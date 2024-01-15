@@ -5,6 +5,7 @@
         <script src="js/googletag.js"></script>    
         <script src="js/sortandfilter.js"></script>
         <script src="js/makereflexive.js"></script>
+        <script src="js/updatetime.js"></script>
         <title>Maggard Portfolio</title>
         <meta name=author content= "Colin Maggard">
         <meta keywords="Portfolio, Resume, Job, Internship">
@@ -32,6 +33,7 @@
                     <option value="pythonproject">Python</option>
                     <option value="htmlproject">HTML/CSS</option>
                     <option value="javascriptproject">JavaScript</option>
+                    <option value="none">N/A</option>
                 </select>
 
                 <label for="completion-status">Completion Status:</label>
@@ -41,18 +43,29 @@
                     <option value="completed">Project works, no longer working on</option>
                     <option value="inprogress">Still in progress</option>
                 </select>
+
+                <label for="affiliation">Type of Project:</label>
+                <select id="affiliation">
+                    <option value="all">All Projects</option>
+                    <option value="personal">Personal Projects</option>
+                    <option value="academic">School Projects</option>
+                    <option value="work">Work Projects</option>
+                </select>
         
                 <label for="sort-order">Sort Order:</label>
                 <select id="sort-order">
                     <option value="relevance">Relevance</option>
-                    <option value="descending">Most Recent First</option>
-                    <option value="ascending">Oldest First</option>
+                    <option value="chron-descending">Most Recent First</option>
+                    <option value="chron-ascending">Oldest First</option>
+                    <option value="time-descending">Most Time Spent First</option>
+                    <option value="time-ascending">Least Time Spent First</option>
                 </select>
             </div>
 
-            <div class="project javaproject completed" chron-order="4" relevance="1">
+            <div class="project javaproject completed personal" chron-order="4" relevance="2" time-spent="5">
                 <h2><a href=https://github.com/maggardcolin/gofish>GoFish - Java</a></h2>
                 <h3>Main focus: Artificial intelligence</h3>
+                <h4>Approximate time spent:</h4>
                 <p>The goal of this app was to create a GoFish-like game that a user plays against a computer.
                     This computer can remember which cards the player asks for that it does not have at the time, 
                     and will also remember which cards it has already asked for that the player does not have (to its knowledge).
@@ -70,9 +83,10 @@
                 </p>
             </div>
 
-            <div class="project htmlproject javascriptproject workingon" chron-order="5" relevance="2">
+            <div class="project htmlproject javascriptproject workingon personal" chron-order="5" relevance="1" time-spent="80">
                 <h2>Portfolio Website - HTML/CSS/JavaScript</h2>
                 <h3>Main focus: Web design</h3>
+                <h4>Approximate time spent:</h4>
                 <p>
                     My main focus for this project was to become more comfortable with web design and scripting. My projects and 
                     experience pages include a filtering and sorting system that I developed using JavaScript, and my coursework page 
@@ -94,13 +108,16 @@
                     I assigned each project box the class ".project" as well as various classes and attributes that describe what type of 
                     project it is. Using JavaScript, I set it up so that each time the values are updated (or the page is loaded), 
                     the order of the boxes and which are displayed is updated according to whatever is input into the dropdown boxes. 
-                    The project boxes are not visible unless their language is selected, and they are sorted by certain values if necessary.
+                    The project boxes are not visible unless their language is selected, and they are sorted by certain values if necessary. 
+                    I wanted to create a robust and customizable system that would allow me to easily enter and display projects and work 
+                    experiences that I have been and am currently engaged in.
                 </p>
             </div>
 
-            <div class="project javaproject completed" chron-order="6" relevance="3">
+            <div class="project javaproject completed personal" chron-order="6" relevance="3" time-spent="5">
                 <h2><a href=https://github.com/maggardcolin/inventorymanagement>Inventory Management - Java</a></h2>
                 <h3>Main focus: Database manipulation</h3>
+                <h4>Approximate time spent:</h4>
                 <p>The goal of this app was to create a system that allows a user to view and modify a database containing items with various attributes. The user is able to 
                     add or remove items, restock and sell items.
                 </p>
@@ -111,9 +128,10 @@
                 </p>
             </div>
 
-            <div class="project javaproject workingon" chron-order="3" relevance="4">
+            <div class="project javaproject workingon personal" chron-order="3" relevance="4" time-spent="5">
                 <h2><a href=https://github.com/maggardcolin/secretsanta>Secret Santa App - Java</a></h2>
                 <h3>Main focus: Hashmaps</h3>
+                <h4>Approximate time spent:</h4>
                 <p>
                     The goal for this app was to create an app that would match
                     each name with a different name, while avoiding someone's name being
@@ -134,9 +152,10 @@
                 </p>
             </div>
 
-            <div class="project hdlproject completed" chron-order="2" relevance="5">
+            <div class="project hdlproject completed academic" chron-order="2" relevance="5" time-spent="20">
                 <h2>Pong Game - Verilog (created in ECE 352)</h2>
                 <h3>Main focus: Digital system design</h3>
+                <h4>Approximate time spent:</h4>
                 <p>
                     Collaborated effectively with a partner to use Verilog to program a Field Programmable Gate Array (FPGA) using Intel Quartus Prime. Created and 
                     implemented a finite state machine that allowed two players to play a timing-sensitive game of Pong on a FPGA. Scores were updated using internal Boolean  
@@ -145,9 +164,10 @@
                 </p>
             </div>
 
-            <div class="project pythonproject completed" chron-order="1" relevance="6">
+            <div class="project pythonproject completed personal" chron-order="1" relevance="6" time-spent="5">
                 <h2><a href=https://github.com/maggardcolin/data-generator>Statistical Data Generator App - Python</a></h2>
                 <h3>Main focus: Application of random walks</h3>
+                <h4>Approximate time spent:</h4>
                 <p>
                     The goal for this app was to create a program that would generate a set of numbers that correspond to 
                     a user-specified set of statistical parameters, namely mean and standard deviation. This program has options to

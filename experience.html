@@ -5,6 +5,7 @@
         <script src="js/googletag.js"></script>   
         <script src="js/sortandfilter.js"></script>     
         <script src="js/makereflexive.js"></script>
+        <script src="js/updatetime.js"></script>
         <title>Maggard Portfolio</title>
         <meta name=author content= "Colin Maggard">
         <meta keywords="Portfolio, Resume, Job, Internship">
@@ -25,8 +26,8 @@
             <h1 class="title">Experience</h1>
             
             <div id="search-bar">
-                <label for="filter-option">Filter by Type:</label>
-                <select id="filter-option">
+                <label for="affiliation">Filter by Type:</label>
+                <select id="affiliation">
                     <option value="all">All Experience</option>
                     <option value="internship/coop">Internship/Coop</option>
                     <option value="research">Research</option>
@@ -36,14 +37,15 @@
                 <label for="sort-order">Sort Order:</label>
                 <select id="sort-order">
                     <option value="relevance">Relevance</option>
-                    <option value="descending">Most Recent First</option>
-                    <option value="ascending">Oldest First</option>
+                    <option value="chron-descending">Most Recent First</option>
+                    <option value="chron-ascending">Oldest First</option>
                 </select>
             </div>
 
-            <div class="project internship/coop" chron-order="1" relevance="1">
+            <div class="project internship/coop" chron-order="1" relevance="1" time-spent="5-10">
                 <h2><a href=https://www.linkedin.com/company/rhiza-health-web3>Rhiza Health</a></h2>
                 <h3>January 2023 through Present - Remote</h3>
+                <h4>Approximate time spent:</h4>
                 <p>
                     I am currently contributing occasionally to Rhiza Health, a startup company that manages payer-provider contracts
                     in Web3 on the blockchain. I have been contributing to Rhiza Health since January 2023, where I started by 

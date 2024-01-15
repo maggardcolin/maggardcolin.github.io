@@ -1,31 +1,60 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     // select all project boxes and the options of the two dropdowns
+    const title = document.querySelector('.title');
     const projects = document.querySelectorAll('.project');
-    const languageFilter = document.getElementById('filter-option');
-    const completionStatus = document.getElementById('completion-status');
+    const affiliation = document.getElementById('affiliation');
+    let languageFilter = undefined;
+    let completionStatus = undefined;
+    if (title.textContent === "Projects") {
+        languageFilter = document.getElementById('filter-option');
+        completionStatus = document.getElementById('completion-status');
+    }
     const sortOrder = document.getElementById('sort-order');
-
+    
+    affiliation.addEventListener('change', filterProjects);
+    sortOrder.addEventListener('change', filterProjects);
+    if (title.textContent === "Projects") {
+        languageFilter.addEventListener('change', filterProjects);
+        completionStatus.addEventListener('change', filterProjects);
+    }
+    
     function filterProjects() {
-        const selectedLanguage = languageFilter.value;
-        const selectedCompletionStatus = completionStatus.value;
         const selectedSortOrder = sortOrder.value;
 
         // show a given project if all is selected or if its language class is
-        projects.forEach(project => {
-            const language = project.classList.contains(selectedLanguage);
-            const status = project.classList.contains(selectedCompletionStatus);
-            const isVisible = (selectedLanguage === 'all' || language) && (selectedCompletionStatus === 'all' || status);
-            project.style.display = isVisible ? 'block' : 'none';
-        });
-
+        if (title.textContent === "Projects") {
+            const selectedLanguage = languageFilter.value;
+            const selectedCompletionStatus = completionStatus.value;
+            const selectedAffiliation = affiliation.value;
+            projects.forEach(project => {
+                const language = selectedLanguage === 'all' || project.classList.contains(selectedLanguage);
+                const status = selectedCompletionStatus === 'all' || project.classList.contains(selectedCompletionStatus);
+                const affiliationtype = selectedAffiliation === 'all' || project.classList.contains(selectedAffiliation);
+                const isVisible = language && status && affiliationtype;
+                project.style.display = isVisible ? 'block' : 'none';
+            });
+        } else if (title.textContent === "Experience") {
+            const selectedAffiliation = affiliation.value;
+            projects.forEach(project => {
+                const affiliationtype = selectedAffiliation === 'all' || project.classList.contains(selectedAffiliation);
+                const isVisible = affiliationtype;
+                project.style.display = isVisible ? 'block' : 'none';
+            });
+        } else {
+            console.log("error");
+        }
+        
         // sort projects based on specified order
         const sortedProjects = Array.from(projects).sort((a, b) => {
-            
-            if (selectedSortOrder === 'ascending' || selectedSortOrder === 'descending') {
+            if (selectedSortOrder === 'chron-ascending' || selectedSortOrder === 'chron-descending') {
                 const orderA = parseInt(a.getAttribute('chron-order'));
                 const orderB = parseInt(b.getAttribute('chron-order'));     
-                return selectedSortOrder === 'ascending' ? orderA - orderB : orderB - orderA;
+                return selectedSortOrder === 'chron-ascending' ? orderA - orderB : orderB - orderA;
+            } else if (selectedSortOrder === 'time-ascending' || selectedSortOrder === 'time-descending') {
+                const orderA = parseInt(a.getAttribute('time-spent'));
+                const orderB = parseInt(b.getAttribute('time-spent'));     
+                return selectedSortOrder === 'time-ascending' ? orderA - orderB : orderB - orderA;
             } else {
                 const orderA = parseInt(a.getAttribute('relevance'));
                 const orderB = parseInt(b.getAttribute('relevance'));     
@@ -39,10 +68,6 @@ document.addEventListener("DOMContentLoaded", function() {
             section.appendChild(project);
         });
     }
-
-    languageFilter.addEventListener('change', filterProjects);
-    completionStatus.addEventListener('change', filterProjects);
-    sortOrder.addEventListener('change', filterProjects);
 
     filterProjects();
 });
