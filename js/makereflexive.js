@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const colorKey = document.querySelector('.color-key');
             colorKey.style.display = 'none';
             const message = document.querySelector('.message');
-            message.textContent = "This feature does not currently work on mobile devices. Please view on a desktop computer";
+            message.textContent = "This feature does not currently work on mobile devices. Please view this page on a desktop computer.";
         }
         
     }
