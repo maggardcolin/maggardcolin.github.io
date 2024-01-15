@@ -125,13 +125,16 @@ label, select, option {
     border-bottom-right-radius: 20px;
 }
 #color-key {
-    display: flex;
     width:650px;
     background-color: #E3DEDE;
     border: 1px solid #000000;
     margin: 0 auto;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    font-size: smaller;
+}
+#color-key h3 {
+    padding-left: 7.5%;
 }
 #course-message {
     font-size: small;
