@@ -13,9 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log("Desktop device detected");
         const navbarelements = document.querySelectorAll('.navbarelements');
         navbarelements.forEach(navbarelement => {
-            navbarelement.style.width = '15%';
+            navbarelement.style.width = '20%';
             const anchorElement = navbarelement.querySelector('a');
-            anchorElement.style.color = 'red';
             anchorElement.style.fontSize = 'smaller';
 
         });
