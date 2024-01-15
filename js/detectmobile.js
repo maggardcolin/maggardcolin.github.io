@@ -6,9 +6,9 @@ function isMobile() {
   
   if (isMobile()) {
     console.log("Mobile device detected");
-    const navbar = document.querySelectorAll('.navbar');
-    navbar.forEach(navbarelement => {
-        navbarelement.style.width = 10 + '%';
+    const navbarelements = document.querySelectorAll('.navbarelements');
+    navbarelements.forEach(navbarelement => {
+        navbarelement.style.width = '10%';
         navbarelement.style.color = "#FF0000";
     });
   } else {
