@@ -40,7 +40,15 @@ document.addEventListener('DOMContentLoaded', function () {
             const anchorElement = navbarelement.querySelector('a');
             anchorElement.style.fontSize = 'smaller';
         });
-        const listStructure = document.querySelector('.list-structure');
-        listStructure.style.flexDirection = 'column';
+        const title = document.querySelector('.title');
+        if (title.textContent === "Colin Maggard") {
+            const listStructure = document.querySelector('.list-structure');
+            listStructure.style.flexDirection = 'column';
+        }
+        if (title.textContent === "Experience" || title.textContent === "Projects") {
+            const resultsButton = document.querySelector('.results');
+            resultsButton.style.width ="50%";
+        }
+        
     }
 });
