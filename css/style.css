@@ -48,12 +48,14 @@ section {
 .navbarelements {
     float: left;
     border-right: 1px solid #bbb;
+    min-width: 7.5%;
+    max-width: 20%;
 }
 .navbarelements a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10% 0%;
     text-decoration: none;
 }
 .navbarelements :hover {
