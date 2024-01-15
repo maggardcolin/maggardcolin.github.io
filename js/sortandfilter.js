@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // select all project boxes and the options of the two dropdowns
     const projects = document.querySelectorAll('.project');
-    const languageFilter = document.getElementById('language-filter');
+    const languageFilter = document.getElementById('filter-option');
     const sortOrder = document.getElementById('sort-order');
 
     function filterProjects() {
