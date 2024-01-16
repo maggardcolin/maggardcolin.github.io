@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // select all project boxes and the options of the two dropdowns
     const title = document.querySelector('.title');
     const searchbar = document.querySelector('.search-bar');
+    const resetButton = document.querySelector('.reset-button');
     const projects = document.querySelectorAll('.project');
     const affiliation = document.getElementById('affiliation');
     const searchResults = document.querySelector('.results');
@@ -18,6 +19,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const sortOrder = document.getElementById('sort-order');
     
     searchResults.addEventListener('click', changeButton);
+    resetButton.addEventListener('click', resetFilters);
+    resetButton.addEventListener('click', filterProjects);
     affiliation.addEventListener('change', filterProjects);
     sortOrder.addEventListener('change', filterProjects);
     if (title.textContent === "Projects") {
@@ -116,6 +119,23 @@ document.addEventListener("DOMContentLoaded", function() {
             searchBarContainer.querySelector('.search-label').textContent = '';
         }
         searchResults.textContent = `Showing  ${count} out of ${total} results. (Press to ${option} advanced search)`;
+    }
+
+    function resetFilters() {
+        const affiliation = document.getElementById('affiliation');
+        let languageFilter = undefined;
+        let completionStatus = undefined;
+        const sortOrder = document.getElementById('sort-order');
+
+        affiliation.value = 'all';
+        sortOrder.value = 'relevance';
+
+        if (title.textContent === "Projects") {
+            languageFilter = document.getElementById('filter-option');
+            completionStatus = document.getElementById('completion-status');
+            languageFilter.value = 'all';
+            completionStatus.value = 'all';
+        }
     }
 
     function lessThan90(){
