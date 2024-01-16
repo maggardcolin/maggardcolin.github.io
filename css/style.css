@@ -248,3 +248,24 @@ label, select, option {
 .project:hover {
     background-color: #d4d4d4;
 }
+.form-elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.feedback-area {
+    margin-top: 20px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    background-color: #bbb;
+    width: fit-content;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#email-label {
+    margin-bottom: 10px;
+}
+#message-label {
+    margin-bottom: 10px;
+}
