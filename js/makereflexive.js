@@ -62,6 +62,14 @@ function handleResize() {
     } else {
         console.log("error");
     }
+
+    const buttons = document.querySelectorAll('.navbarelements');
+    buttons.forEach(button => {
+        button.style.width = lessThan90() ? '100%' : '200px';
+    });
+    const dropButton = document.querySelector('.drop-button');
+    dropButton.style.width = lessThan90() ? '100%' : '200px'; 
+
         
 }
 
@@ -75,6 +83,12 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         console.log("Mobile device detected");
         const title = document.querySelector('.title');
+        const buttons = document.querySelectorAll('.navbarelements');
+        buttons.forEach(button => {
+            button.style.width = '100%'; 
+        });
+        const dropButton = document.querySelector('.drop-button');
+        dropButton.style.width = '100%'; 
         if (title.textContent === "Colin Maggard") {
             const listStructure = document.querySelector('.list-structure');
             listStructure.style.display = 'flex';
