@@ -56,6 +56,12 @@ label, select, option {
 .list-structure a {
     text-decoration: none;
 }
+.list-structure h3 {
+    text-align: center;
+}
+.list-structure p {
+    text-align: center;
+}
 .listblock {
     padding-top: 0;
     padding-bottom: 0;
@@ -272,4 +278,12 @@ label, select, option {
 }
 #message-label {
     margin-bottom: 10px;
+}
+.text-area {
+    margin-bottom: 3%;
+    padding: 2%;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    background-color: #bbb;
+    text-decoration: none;
 }
