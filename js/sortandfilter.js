@@ -88,8 +88,13 @@ document.addEventListener("DOMContentLoaded", function() {
     function changeButton() {
         option = (option === "hide") ? "show": "hide";
         if (option === "hide") {
-            searchbar.style.display = lessThan90() ? 'flex' : 'grid';
-            searchbar.style.flexDirection = lessThan90() ? 'column' : 'none';
+            if (!isMobile()) {
+                searchbar.style.display = lessThan90() ? 'flex' : 'grid';
+                searchbar.style.flexDirection = lessThan90() ? 'column' : 'none';
+            } else {
+                searchbar.style.display = 'flex';
+                searchbar.style.flexDirection = 'column';
+            }
         } else {
             searchbar.style.display = 'none';
         }
@@ -103,5 +108,11 @@ document.addEventListener("DOMContentLoaded", function() {
     
         // less than 90% of the max screen width, then set as columns
         return (windowWidth < screenWidth - threshold);
+    }
+
+    // regex from https://medium.com/geekculture/detecting-mobile-vs-desktop-browsers-in-javascript-ad46e8d23ce5#:~:text=User%20Agent%20String%20Detection&text=You%20can%20access%20the%20user,a%20mobile%20or%20desktop%20device.
+    function isMobile() {
+        const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+        return regex.test(navigator.userAgent);
     }
 });
