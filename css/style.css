@@ -262,7 +262,7 @@ label, select, option {
     border: 1px solid #000000;
     border-radius: 20px;
     background-color: #bbb;
-    width: fit-content;
+    width: 100%;
     padding-bottom: 20px;
     padding-left: 10px;
     padding-right: 10px;
