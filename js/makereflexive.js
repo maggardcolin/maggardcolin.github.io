@@ -67,9 +67,9 @@ function handleResize() {
             box.style.marginRight = lessThan90() ? '0px' : '10px';
         });
 
-        resultsButton.style.width = lessThan90() ? "50%": "400px";
+        resultsButton.style.width = lessThan90() ? "280px": "400px";
         resultsButton.style.minWidth = '280px';
-        resetButton.style.width = lessThan90() ? "50%": "400px";
+        resetButton.style.width = lessThan90() ? "280px": "400px";
         resetButton.style.minWidth = '280px';
     } else {
         console.log("error");
