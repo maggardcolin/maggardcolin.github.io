@@ -89,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const title = document.querySelector('.title');
         const dropButton = document.querySelector('.drop-button');
         dropButton.style.width = '100%'; 
+        dropButton.style.backgroundColor = '#333';
         if (title.textContent === "Colin Maggard") {
             const listStructure = document.querySelector('.list-structure');
             listStructure.style.display = 'flex';
