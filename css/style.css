@@ -101,6 +101,26 @@ label, select, option {
     width: 285px;
     margin-right: 10px;
 }
+.results-button {
+    text-align: center;
+}
+.results {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    width: 400px;
+    display: inline-block;
+}
+.reset-button {
+    text-align: center;
+}
+.reset {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+    width: 400px;
+    display: inline-block;
+}
 .centered-content {
     text-align: center;
     margin: 0 auto;
@@ -227,14 +247,4 @@ label, select, option {
 }
 .project:hover {
     background-color: #d4d4d4;
-}
-.results-button {
-    text-align: center;
-}
-.results {
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 20px;
-    width: 400px;
-    display: inline-block;
 }
