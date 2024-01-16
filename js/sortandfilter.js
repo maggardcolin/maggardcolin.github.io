@@ -88,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function changeButton() {
         option = (option === "hide") ? "show": "hide";
         const searchBarContainer = document.querySelector('.search-bar-container');
+        const resetButton = document.querySelector('.reset-button');
         if (option === "hide") {
             if (!isMobile()) {
                 searchbar.style.display = lessThan90() ? 'flex' : 'grid';
@@ -96,6 +97,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 searchBarContainer.style.border = '1px solid #000000';
                 searchBarContainer.style.marginBottom = '20px';
                 searchBarContainer.querySelector('.search-label').textContent = 'Advanced Search';
+                resetButton.style.display = 'block';
             } else {
                 searchbar.style.display = 'flex';
                 searchbar.style.flexDirection = 'column';
@@ -103,9 +105,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 searchBarContainer.style.border = '1px solid #000000';
                 searchBarContainer.style.marginBottom = '20px';
                 searchBarContainer.querySelector('.search-label').textContent = 'Advanced Search';
+                resetButton.style.display = 'block';
             }
         } else {
             searchbar.style.display = 'none';
+            resetButton.style.display = 'none';
             searchBarContainer.style.border = 'none';
             searchBarContainer.style.backgroundColor = '#DDD0C8';
             searchBarContainer.style.marginBottom = '0';
