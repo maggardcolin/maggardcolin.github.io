@@ -47,8 +47,11 @@ function handleResize() {
         : "I created the above display by creating an HTML image map over a Sankey diagram and using JavaScript to move the textbox to match the user's mouse position.";
     } else if (title.textContent === "Projects" || title.textContent === "Experience") {
         const searchBar = document.querySelector('.search-bar');
-        searchBar.style.display = lessThan90() ? 'flex' : 'grid';
-        searchBar.style.flexDirection = lessThan90() ? 'column' : 'none';
+        // change here, should not change when hidden
+        if (searchBar.style.display != 'none') {
+            searchBar.style.display = lessThan90() ? 'flex' : 'grid';
+            searchBar.style.flexDirection = lessThan90() ? 'column' : 'none';
+        } 
         const labels = searchBar.querySelectorAll('.label');
         labels.forEach(label => {
             label.style.width = '285px';
