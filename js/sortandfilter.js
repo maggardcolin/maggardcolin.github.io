@@ -94,18 +94,21 @@ document.addEventListener("DOMContentLoaded", function() {
                 searchbar.style.flexDirection = lessThan90() ? 'column' : 'none';
                 searchBarContainer.style.backgroundColor = '#bbb';
                 searchBarContainer.style.border = '1px solid #000000';
+                searchBarContainer.style.marginBottom = '20px';
                 searchBarContainer.querySelector('.search-label').textContent = 'Advanced Search';
             } else {
                 searchbar.style.display = 'flex';
                 searchbar.style.flexDirection = 'column';
                 searchBarContainer.style.backgroundColor = '#bbb';
                 searchBarContainer.style.border = '1px solid #000000';
+                searchBarContainer.style.marginBottom = '20px';
                 searchBarContainer.querySelector('.search-label').textContent = 'Advanced Search';
             }
         } else {
             searchbar.style.display = 'none';
             searchBarContainer.style.border = 'none';
             searchBarContainer.style.backgroundColor = '#DDD0C8';
+            searchBarContainer.style.marginBottom = '0';
             searchBarContainer.querySelector('.search-label').textContent = '';
         }
         searchResults.textContent = `Showing  ${count} out of ${total} results. (Press to ${option} advanced search)`;
