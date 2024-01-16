@@ -72,7 +72,7 @@ label, select, option {
     opacity: 0;
 }
 #intro-paragraph {
-    padding-bottom: 4%;
+    padding-bottom: 15px;
 }
 .search-bar-container {
     margin-bottom: 20px;
