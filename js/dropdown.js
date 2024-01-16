@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     buttons.forEach(button => {
         button.style.display = 'none';
     });
+    menuButton.style.borderBottom = 'none';
 
     // toggle menu
     function dropdown() {
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
         buttons.forEach(button => {
             button.style.display = menuButton.classList.contains("show") ? 'block' : 'none';
         });
+        menuButton.style.borderBottom = menuButton.classList.contains("show") ? '1px solid #bbb' : 'none';
     }
 
     // close menu if user clicks outside of it
@@ -19,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (!e.target.matches('.drop-button') && !e.target.matches('.navbarelements')) {
             if (menuButton.classList.contains('show')) {
                 menuButton.classList.remove('show');
+                menuButton.style.borderBottom = menuButton.classList.contains("show") ? '1px solid #bbb' : 'none';
             }
             const buttons = document.querySelectorAll(".dropdown-content");
             buttons.forEach(button => {
