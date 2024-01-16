@@ -88,16 +88,19 @@
                     <h3>Main focus: Artificial intelligence</h3>
                     <h4>Approximate time spent:</h4>
                     <p>
-                        In this project, I created a GoFish game that a user plays against a computer.
+                        I built this project off of parts of a scrapped card game project that I had been developing, and wanted to make an interactive game that 
+                        a user could play against a computer player with an intelligent decision making process. 
                         This computer can remember which cards the player has asked for, and will not ask for the same card twice if it is sure you don't have it. 
-                        The computer will ask you for cards in this order: cards that it knows you have, cards that it has that it hasn't asked you for already, 
-                        and finally cards that it has that it has already asked for. I created this project in December 2023 and would describe this as a very basic 
+                        I created this project in December 2023 and would describe this as a very basic 
                         AI project due to the computer player having the ability to make intelligent decisions that aren't entirely based on random chance.
+                        Click this box if you want to check out the code associated with this project.
                     </p>
                     <h3>How it works</h3>
                     <p>Each player has a hand, as well as a point total that is updated each time a pair is made. The deck/pond and each of these 
-                        hands use an ArrayList datastructure to store the Card objects. Each player's hand is checked for pairs after each move, and 
-                        with the aforementioned computer logic, it is possible to play a full game against the computer. This game follows what I would consider to be 
+                        hands use an ArrayList datastructure to store the Card objects. The computer will ask you for cards in this order: cards that it knows you have, 
+                        cards that it has that it hasn't asked you for already, and finally cards that it has that it has already asked for. 
+                        Each player's hand is checked for pairs after each move, and it is 
+                        possible to play a full game against the computer. This game follows what I would consider to be 
                         standard rules for GoFish, but individual rules are not difficult to implement and I may consider adding a way to change them, such as 
                         the number of cards drawn when your hand is empty, or using 4-of-a-kinds instead of pairs for points.
                     </p>
@@ -119,17 +122,20 @@
                     </p>
                 </a>
 
-                <a href=https://github.com/maggardcolin/inventorymanagement class="fade-in project javaproject completed personal" chron-order="231228" relevance="3" time-spent="5">
+                <a href=https://github.com/maggardcolin/inventorymanagement class="fade-in project javaproject completed personal" chron-order="231228" relevance="3" time-spent="8">
                     <h2>Inventory Management - Java</h2>
                     <h3>Main focus: Database manipulation</h3>
                     <h4>Approximate time spent:</h4>
-                    <p>The goal of this program was to create a system that allows a user to view and modify a database containing items with various attributes, such as quantity and price. 
-                        The user is able to add or remove items, restock and sell items. I created this program in order to serve as the backend for a online storefront I was creating for a friend 
-                        at the time.
+                    <p>
+                        I created this program in order to serve as a prototype for the backend for a mockup of an online merchandise 
+                        storefront that I was developing for a friend at the time.
+                        This program allows a user to view and modify a database containing items with various attributes, such as quantity and price. 
+                        The user is able to add or remove items, restock and sell items. Click this box if you want to check out the code associated with this project.
                     </p>
                     <h3>How it works</h3>
-                    <p>I stored each of the items as well as a "sales" value into a csv file, which is loaded upon the app being run. Each item is then split from the csv file and placed
-                        into an ArrayList. This ArrayList is able to be modified by commands specified by the user, and once these commands are run, the csv file is overwritten in the same format that 
+                    <p>I stored each of the items into a CSV (comma-separated values) file, which is commonly used for storing datasets. This file is loaded when the program is run, and each item is then read in from the csv file 
+                        and placed into an ArrayList, which is a data structure that can hold references to each item. Each item's data is associated with it, and it is placed as an entire package (object) in 
+                        the ArrayList. The user is able to modify the quantities of items in this ArrayList using commands, and once these commands are executed, the CSV file is overwritten in the same format that 
                         it was originally in.
                     </p>
                 </a>
@@ -139,22 +145,23 @@
                     <h3>Main focus: Hashmaps</h3>
                     <h4>Approximate time spent:</h4>
                     <p>
-                        The goal for this app was to create an app that would match
-                        each name with a different name, while avoiding someone's name being
-                        matched to themselves (for a secret santa gift exchange). I implemented this 
-                        using a hashmap class that I developed in my CS400 class in Fall 2023, and created 
-                        JUnit tests that made sure that the output was as expected. This project utilized the 
-                        programming concepts that I was learning in my class at the time, including hashmaps, 
-                        circular indices, and frontend/backend development.
+                        Trying to assign names for a Secret-Santa style gift exchange is fairly annoying, especially when someone is assigned 
+                        their own name and the entire process has to be restarted. The goal for this program was to match
+                        each participant's name with a different name, while avoiding the event of someone getting assigned their own name. 
+                        This project utilized the programming concepts that I was learning in my CS 400 class in Fall 2023, including hashmaps, 
+                        circular indices, and frontend/backend development. Click this box if you want to check out the code associated with this project.
                     </p>
                     <h3>How it works</h3>
                     <p>
                         The app prompts the user for how many people are participating in 
                         the secret santa gift exchange, then for the names of each of the users. It then
                         sequentially assigns each user a different name, and restarts the entire process if anyone's name
-                        is matched to themselves. I stored each name pair in a hashmap and checked to see if the name pair
-                        existed already to determine if the process should be run again. I am also planning on implementing 
-                        file output options in the code so that the names are not revealed.
+                        is matched to themselves. I stored each name pair in a hashmap data structure and checked to see if 
+                        the person was to matched to their own name to determine if the process should be restarted. 
+                        The names are all currently displayed at once, intended to be read by a non-participating third party, but 
+                        I am planning on implementing file output or SMS options in the code so that the names are not revealed. 
+                        I am also planning on creating an executable desktop app out of this eventually so that it can be run 
+                        by anyone on their computer without needing coding knowledge.
                     </p>
                 </a>
 
@@ -163,10 +170,16 @@
                     <h3>Main focus: Digital system design</h3>
                     <h4>Approximate time spent:</h4>
                     <p>
-                        Collaborated effectively with a partner to use Verilog to program a Field Programmable Gate Array (FPGA) using Intel Quartus Prime. Created and 
-                        implemented a finite state machine that allowed two players to play a timing-sensitive game of Pong on a FPGA. Scores were updated using internal Boolean  
-                        logic and displayed on a set of 7-segment displays. Player input, reset, and pause functionality were implemented through use of switches on FPGA board.
-                        Used testbench programs in Verilog to simulate and record output of the program under various conditions.
+                        I made this project with Tyler Jordan in ECE 352: Digital System Fundamentals. We collaboratively developed code in Verilog to 
+                        program a Field Programmable Gate Array (FPGA) board using Intel Quartus Prime.
+                        We created and implemented a finite state machine that allowed two players to play a timing-sensitive game of Pong on this FPGA board. 
+                        In our demonstration of the project, Tyler beat me in Pong.                        
+                    </p>
+                    <h3>How it works</h3>
+                    <p>
+                        Scores and game logic are updated using internal Boolean logic and displayed on a set of 7-segment displays. 
+                        Player input, reset, and pause functionality are implemented through the use of switches on the FPGA board.
+                        We used Verilog testbench programs in order to simulate and record output of our program under various conditions.
                     </p>
                 </div>
 
@@ -179,16 +192,15 @@
                         a user-specified set of statistical parameters, namely mean and standard deviation. This program has options to
                         control the number of decimal places (precision), number of points generated, and maximum amount error permissible.
                         I created this project in Spring 2022 and it was partially because of my work on this project that I became interested 
-                        in programming and going to school for it.
+                        in programming and going to school for it. Click this box if you want to check out the code associated with this project.
                     </p>
                     <h3>How it works</h3>
                     <p>
-                        This program prompts the user for their intended average, standard deviation, number of data points, precision and maximum permissible error, 
-                        then makes a few intermediary calculations in order to be able to supply the random.randint() function with integer values based on the number of 
-                        decimal places desired. The main loop body starts off by determining the "differential" of the point, that is, how far off it is from the desired mean 
+                        This program prompts the user for their intended average, standard deviation, number of data points, and a few other specifications, 
+                        then makes a few intermediary calculations. The main loop body starts off by determining the "differential" of the point, that is, how far off it is from the desired mean 
                         value. It then adds in any factors to be considered from the previous iterations of the loop, if any, and then updates a value called "leftovers" that 
                         represents the amount of "pull" we need in order to "balance" the data points around the desired mean. The created point is then appended to an array of numbers 
-                        and the program repeats until all data points are created.
+                        and the program repeats until all data points are created. There is a file output option as well.
                     </p>
                 </a>
 
@@ -204,7 +216,7 @@
                     <h3>How it works</h3>
                     <p>
                         A random word from a very long list of five letter words is picked, and the user's guesses are checked 
-                        against said list to ensure that their guesses are valid.
+                        against this list to ensure that their guesses are valid.
                         There are limits on the input length and number of guesses that the user can use. Once the word has been  
                         correctly guessed, or the user runs out of guesses, the game ends and a results screen is displayed, where the user 
                         can choose to restart the game or not.
