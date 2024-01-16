@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // select all project boxes and the options of the two dropdowns
     const title = document.querySelector('.title');
-    const searchbar = document.getElementById('.search-bar');
+    const searchbar = document.querySelector('.search-bar');
     const projects = document.querySelectorAll('.project');
     const affiliation = document.getElementById('affiliation');
     const searchResults = document.querySelector('.results');
@@ -88,10 +88,20 @@ document.addEventListener("DOMContentLoaded", function() {
     function changeButton() {
         option = (option === "hide") ? "show": "hide";
         if (option === "hide") {
-            searchbar.style.display = 'flex';
+            searchbar.style.display = lessThan90() ? 'flex' : 'grid';
+            searchbar.style.flexDirection = lessThan90() ? 'column' : 'none';
         } else {
             searchbar.style.display = 'none';
         }
         searchResults.textContent = `Showing  ${count} out of ${total} results. (Press to ${option} advanced search)`;
+    }
+
+    function lessThan90(){
+        const screenWidth = window.screen.width;
+        const windowWidth = window.innerWidth;
+        const threshold = 0.25 * screenWidth;
+    
+        // less than 90% of the max screen width, then set as columns
+        return (windowWidth < screenWidth - threshold);
     }
 });
