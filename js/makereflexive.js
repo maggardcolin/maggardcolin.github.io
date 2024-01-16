@@ -55,10 +55,14 @@ function handleResize() {
         const labels = searchBar.querySelectorAll('.label');
         labels.forEach(label => {
             label.style.width = '285px';
+            label.style.textAlign = lessThan90() ? 'center' : 'left';
+            label.style.marginLeft = lessThan90() ? '0px' : '10px';
         });
         const boxes = searchBar.querySelectorAll('.select');
         boxes.forEach(box => {
             box.style.width = '285px';
+            box.style.textAlign = lessThan90() ? 'center' : 'left';
+            box.style.marginRight = lessThan90() ? '0px' : '10px';
         });
         const resultsButton = document.querySelector('.results');
         resultsButton.style.width = lessThan90() ? "50%": "400px";
