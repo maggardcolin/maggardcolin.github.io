@@ -62,12 +62,6 @@ function handleResize() {
     } else {
         console.log("error");
     }
-    // navbar handling
-    navbarelements = document.querySelectorAll(".navbarelements");
-    navbarelements.forEach(element => {
-        element.style.fontSize = isSmallWindow() ? '10px' : '15px';
-        element.style.width = isSmallWindow() ? '75px' : '100px';
-    });
         
 }
 
