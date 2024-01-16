@@ -86,6 +86,7 @@ label, select, option {
     grid-column-gap: 0px;
     border: 1px solid #000000;
     background-color: #bbb;
+    border-radius: 20px;
 }
 .search-bar label {
     max-width: 130px;
