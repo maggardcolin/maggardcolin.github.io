@@ -12,8 +12,10 @@ document.addEventListener("DOMContentLoaded", function() {
         if (title.textContent === "Projects" || title.textContent === "Experience") {
             const affiliation = document.getElementById('affiliation');
             const sortOrder = document.getElementById('sort-order');
+            const resetButton = document.querySelector('.reset-button');
             affiliation.addEventListener('change', fadeElementsInOrder);
             sortOrder.addEventListener('change', fadeElementsInOrder);
+            resetButton.addEventListener('click', fadeElementsInOrder);
         }
     } else {
         console.log("error");
