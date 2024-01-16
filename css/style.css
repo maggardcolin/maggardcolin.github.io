@@ -113,7 +113,8 @@ label, select, option {
 .navbarelements {
     float: left;
     border-right: 1px solid #bbb;
-    width: 100px;
+    border-bottom: 1px solid #bbb;
+    width: 200px;
 }
 .navbarelements a {
     display: block;
@@ -124,6 +125,23 @@ label, select, option {
 }
 .navbarelements :hover {
     background-color: rgb(200, 76, 48);
+}
+.dropdown-menu {
+    float: left;
+    overflow: hidden;
+}
+.drop-button {
+    cursor: pointer;
+    font-size: 16px;  
+    border: none;
+    border-bottom: 1px solid #bbb;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    width: 200px;
 }
 .active {
     background-color: #0a4690;

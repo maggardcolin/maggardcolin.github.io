@@ -14,11 +14,18 @@
     <body>
         <div>
             <ul class="navbar">
-                <li class="navbarelements"><a href="index.html">Home</a></li>
-                <li class="navbarelements"><a href="projects.html">Projects</a></li>
-                <li class="navbarelements"><a href="experience.html">Experience</a></li>
-                <li class="navbarelements"><a href="coursework.html">Coursework</a></li>
-                <li class="navbarelements"><a href="contact.html" class="active">Contact</a></li>
+                <li class="navbarelements dropdown-menu">
+                    <button class="drop-button" id="navDrop">Navigation
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div>
+                      <a href="index.html" class="navbarelements dropdown-content">Home</a>
+                      <a href="projects.html" class="navbarelements dropdown-content">Projects</a>
+                      <a href="experience.html" class="navbarelements dropdown-content">Experience</a>
+                      <a href="coursework.html" class="navbarelements dropdown-content">Coursework</a>
+                      <a href="contact.html" class="navbarelements dropdown-content active">Contact</a>
+                    </div>
+                </li>
             </ul>
         </div>
         <div class="section content-body">

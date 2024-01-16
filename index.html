@@ -5,20 +5,29 @@
         <script src="js/googletag.js"></script>
         <script src="js/makereflexive.js"></script>
         <script src="js/fadein.js"></script>
+        <script src="js/dropdown.js"></script>
         <title>Maggard Portfolio</title>
         <meta name=author content= "About Me">
         <meta keywords="Portfolio, Resume, Job, Internship">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="images/favicon.png" type="image/png">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <ul class="navbar">
-            <li class="navbarelements"><a href="index.html" class="active">Home</a></li>
-            <li class="navbarelements"><a href="projects.html">Projects</a></li>
-            <li class="navbarelements"><a href="experience.html">Experience</a></li>
-            <li class="navbarelements"><a href="coursework.html">Coursework</a></li>
-            <li class="navbarelements"><a href="contact.html">Contact</a></li>
+            <li class="navbarelements dropdown-menu">
+                <button class="drop-button" id="navDrop">Navigation
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div>
+                  <a href="index.html" class="navbarelements dropdown-content active">Home</a>
+                  <a href="projects.html" class="navbarelements dropdown-content">Projects</a>
+                  <a href="experience.html" class="navbarelements dropdown-content">Experience</a>
+                  <a href="coursework.html" class="navbarelements dropdown-content">Coursework</a>
+                  <a href="contact.html" class="navbarelements dropdown-content">Contact</a>
+                </div>
+            </li>
         </ul>
         <div class= "section content-body">
             <h1 class="title">Colin Maggard</h1>

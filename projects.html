@@ -16,11 +16,18 @@
     </head>
     <body>
         <ul class="navbar">
-            <li class="navbarelements"><a href="index.html">Home</a></li>
-            <li class="navbarelements"><a href="projects.html" class="active">Projects</a></li>
-            <li class="navbarelements"><a href="experience.html">Experience</a></li>
-            <li class="navbarelements"><a href="coursework.html">Coursework</a></li>
-            <li class="navbarelements"><a href="contact.html">Contact</a></li>
+            <li class="navbarelements dropdown-menu">
+                <button class="drop-button" id="navDrop">Navigation
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div>
+                  <a href="index.html" class="navbarelements dropdown-content">Home</a>
+                  <a href="projects.html" class="navbarelements dropdown-content active">Projects</a>
+                  <a href="experience.html" class="navbarelements dropdown-content">Experience</a>
+                  <a href="coursework.html" class="navbarelements dropdown-content">Coursework</a>
+                  <a href="contact.html" class="navbarelements dropdown-content">Contact</a>
+                </div>
+            </li>
         </ul>
         <div class="section content-body">  
             <h1 class="title">Projects</h1>
