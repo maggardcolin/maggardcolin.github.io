@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // select all project boxes and the options of the two dropdowns
     const title = document.querySelector('.title');
-    const searchbar = document.getElementById('search-bar');
+    const searchbar = document.getElementById('.search-bar');
     const projects = document.querySelectorAll('.project');
     const affiliation = document.getElementById('affiliation');
     const searchResults = document.querySelector('.results');
