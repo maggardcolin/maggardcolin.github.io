@@ -114,13 +114,14 @@ label, select, option {
     float: left;
     border-right: 1px solid #bbb;
     border-bottom: 1px solid #bbb;
-    width: 200px;
+    width: 100%;
 }
 .navbarelements a {
     display: block;
     color: white;
-    text-align: center;
-    padding: 10% 0%;
+    text-align: left;
+    padding: 20px 0;
+    padding-left: 20px;
     text-decoration: none;
 }
 .navbarelements :hover {
@@ -141,7 +142,9 @@ label, select, option {
     background-color: inherit;
     font-family: inherit;
     margin: 0;
-    width: 200px;
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
 }
 .active {
     background-color: #0a4690;
