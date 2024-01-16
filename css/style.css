@@ -80,10 +80,13 @@ label, select, option {
     border: 1px solid #000000;
     border-radius: 20px;
 }
+.search-bar-container h2 {
+    text-align: center;
+}
 .search-bar {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding-top: 2%;
+    margin-top: 20px;
     margin-bottom: 20px;
     align-items: center;
     justify-content: space-between;
