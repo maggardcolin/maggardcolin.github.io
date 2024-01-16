@@ -25,6 +25,7 @@
                   <a href="projects.html" class="navbarelements dropdown-content active">Projects</a>
                   <a href="experience.html" class="navbarelements dropdown-content">Experience</a>
                   <a href="coursework.html" class="navbarelements dropdown-content">Coursework</a>
+                  <a href="about.html" class="navbarelements dropdown-content">About This Website</a>
                   <a href="contact.html" class="navbarelements dropdown-content">Contact</a>
                 </div>
             </li>
@@ -48,8 +49,8 @@
                     <label class="label" for="completion-status">Project Status:</label>
                     <select class="select" id="completion-status">
                         <option value="all">All Projects</option>
-                        <option value="workingon">Project works, continuing to make changes</option>
-                        <option value="completed">Project works, no longer working on</option>
+                        <option value="workingon">Project works, still making changes</option>
+                        <option value="completed">Project works, not working on</option>
                         <option value="inprogress">Still in progress</option>
                     </select>
 
@@ -86,60 +87,67 @@
                     <h2>GoFish - Java</h2>
                     <h3>Main focus: Artificial intelligence</h3>
                     <h4>Approximate time spent:</h4>
-                    <p>The goal of this app was to create a GoFish-like game that a user plays against a computer.
-                        This computer can remember which cards the player asks for that it does not have at the time, 
-                        and will also remember which cards it has already asked for that the player does not have (to its knowledge).
-                        The computer will ask if you have cards in this order: cards that it knows you have that it also has, cards that
-                        it has that it hasn't asked you for already, then finally cards that it has that it has already asked for. I created this project 
-                        in December 2023 and would describe this as a very basic AI project due to the computer player having the ability to make intelligent decisions that 
-                        aren't entirely based on random chance.
+                    <p>
+                        In this project, I created a GoFish game that a user plays against a computer.
+                        This computer can remember which cards the player has asked for, and will not ask for the same card twice if it is sure you don't have it. 
+                        The computer will ask you for cards in this order: cards that it knows you have, cards that it has that it hasn't asked you for already, 
+                        and finally cards that it has that it has already asked for. I created this project in December 2023 and would describe this as a very basic 
+                        AI project due to the computer player having the ability to make intelligent decisions that aren't entirely based on random chance.
                     </p>
                     <h3>How it works</h3>
                     <p>Each player has a hand, as well as a point total that is updated each time a pair is made. The deck/pond and each of these 
-                        hands use ArrayLists to store the Card objects. There is a method that checks a player's hand for pairs, and with the aforementioned 
-                        computer logic, it is possible to play a full game against the computer. This game follows what I would consider to be 
+                        hands use an ArrayList datastructure to store the Card objects. Each player's hand is checked for pairs after each move, and 
+                        with the aforementioned computer logic, it is possible to play a full game against the computer. This game follows what I would consider to be 
                         standard rules for GoFish, but individual rules are not difficult to implement and I may consider adding a way to change them, such as 
                         the number of cards drawn when your hand is empty, or using 4-of-a-kinds instead of pairs for points.
                     </p>
                 </a>
 
-                <div class="fade-in project htmlproject javascriptproject workingon personal" chron-order="240115" relevance="1" time-spent="80">
+                <a href="about.html" class="fade-in project htmlproject javascriptproject workingon personal" chron-order="240115" relevance="1" time-spent="80">
                     <h2>Portfolio Website - HTML/CSS/JavaScript</h2>
                     <h3>Main focus: Web design</h3>
                     <h4>Approximate time spent:</h4>
                     <p>
-                        My main focus for this project was to become more comfortable with web design and scripting. My projects and 
+                        My main focus for this project was to become more comfortable with web design and scripting and completely build an 
+                        entire page from the ground up. My projects and 
                         experience pages include a filtering and sorting system that I developed using JavaScript, and my coursework page 
                         includes an interactive course map that I created using an HTML image map over a 
-                        <a href="https://sankeymatic.com/build/">Sankey diagram</a>. I also spent time making this website reflexive so that 
+                        Sankey diagram. I also spent time making this website reflexive so that 
                         it updates appropriately on different devices and resolutions. After this project, I am more comfortable with web design, 
-                        and I am planning on learning and implementing other web technologies in the future to this website and others.
+                        and I am planning on learning and implementing other web technologies in the future to this website and others. To read more 
+                        about this project, click on this box to go to the "About" page.
                     </p>
                     <h3>How the Interactive Course Map works</h3>
                     <p>
-                        I used the HTML attribute "usemap" on a Sankey diagram that I created manually, and assigned a division of the class ".coursebox" 
-                        to each class that I took, which has an associated description with it. Each coursebox is manually placed using coordinates 
-                        onto the image, and the textbox associated with each coursebox is not visible unless the coursebox is hovered over. 
+                        I placed an "image map" on a Sankey diagram that I created manually, which is essentially an overlay on top of the 
+                        image that stores location data for each of the class boxes. Each of the class boxes is manually coded using coordinates 
+                        onto the image, and the textbox associated with each course is not visible unless the class box is hovered over. 
                         I also used JavaScript to update the CSS for the textbox to make it follow the user's mouse when it is over the associated 
                         coursebox.
                     </p>
                     <h3>How the sorting and filtering options on this page work</h3>
                     <p>
-                        I assigned each project box the class ".project" as well as various classes and attributes that describe what type of 
-                        project it is. Using JavaScript, I set it up so that each time the values are updated (or the page is loaded), 
-                        the order of the boxes and which are displayed is updated according to whatever is input into the dropdown boxes. 
-                        The project boxes are not visible unless their language is selected, and they are sorted by certain values if necessary. 
-                        I wanted to create a robust and customizable system that would allow me to easily enter and display projects and work 
-                        experiences that I have been and am currently engaged in.
+                        Each project is placed into its own container, and assigned various attributes based on what type of project it is. 
+                        I used JavaScript to make it so that each time the values are updated (or the page is loaded), the selected inputs are 
+                        applied to the display. I wanted to create a robust and customizable system that would allow me to easily enter and display 
+                        projects and work experiences that I have been and am currently engaged in.
                     </p>
-                </div>
+                    <h3>How the site works on various resolutions and displays</h3>
+                    <p>
+                        Making this website reflexive (work on all displays) was the most difficult task that this project presented. In order to do this, 
+                        I used a combination of JavaScript code and CSS rules to update the page depending on the size of the user's browser window as well as 
+                        the type of device that they are using. For example, the advanced search box on this page looks different on mobile devices as well as smaller 
+                        browser windows. I encourage you to try it out for yourself!
+                    </p>
+                </a>
 
                 <a href=https://github.com/maggardcolin/inventorymanagement class="fade-in project javaproject completed personal" chron-order="231228" relevance="3" time-spent="5">
                     <h2>Inventory Management - Java</h2>
                     <h3>Main focus: Database manipulation</h3>
                     <h4>Approximate time spent:</h4>
-                    <p>The goal of this app was to create a system that allows a user to view and modify a database containing items with various attributes. The user is able to 
-                        add or remove items, restock and sell items.
+                    <p>The goal of this program was to create a system that allows a user to view and modify a database containing items with various attributes, such as quantity and price. 
+                        The user is able to add or remove items, restock and sell items. I created this program in order to serve as the backend for a online storefront I was creating for a friend 
+                        at the time.
                     </p>
                     <h3>How it works</h3>
                     <p>I stored each of the items as well as a "sales" value into a csv file, which is loaded upon the app being run. Each item is then split from the csv file and placed
