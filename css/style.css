@@ -74,19 +74,21 @@ label, select, option {
 #intro-paragraph {
     padding-bottom: 4%;
 }
+.search-bar-container {
+    margin-bottom: 20px;
+    background-color: #bbb;
+    border: 1px solid #000000;
+    border-radius: 20px;
+}
 .search-bar {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding-top: 2%;
-    padding-bottom: 2%;
     margin-bottom: 20px;
     align-items: center;
     justify-content: space-between;
-    grid-row-gap: 10px;
-    grid-column-gap: 0px;
-    border: 1px solid #000000;
-    background-color: #bbb;
-    border-radius: 20px;
+    row-gap: 10px;
+    column-gap: 0px;
 }
 .search-bar label {
     max-width: 130px;

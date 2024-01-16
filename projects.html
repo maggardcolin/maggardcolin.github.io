@@ -31,46 +31,49 @@
         </ul>
         <div class="section content-body">  
             <h1 class="title">Projects</h1>
-            <div class="search-bar">
-                <label class="label" for="filter-option">Language:</label>
-                <select class="select" id="filter-option">
-                    <option value="all">All Languages</option>
-                    <option value="javaproject">Java</option>
-                    <option value="hdlproject">Hardware Design Languages</option>
-                    <option value="pythonproject">Python</option>
-                    <option value="htmlproject">HTML/CSS</option>
-                    <option value="javascriptproject">JavaScript</option>
-                    <option value="none">N/A</option>
-                </select>
+            <div class="search-bar-container">
+                <div class="search-bar">
+                    <label class="label" for="filter-option">Language:</label>
+                    <select class="select" id="filter-option">
+                        <option value="all">All Languages</option>
+                        <option value="javaproject">Java</option>
+                        <option value="hdlproject">Hardware Design Languages</option>
+                        <option value="pythonproject">Python</option>
+                        <option value="htmlproject">HTML/CSS</option>
+                        <option value="javascriptproject">JavaScript</option>
+                        <option value="none">N/A</option>
+                    </select>
 
-                <label class="label" for="completion-status">Project Status:</label>
-                <select class="select" id="completion-status">
-                    <option value="all">All Projects</option>
-                    <option value="workingon">Project works, continuing to make changes</option>
-                    <option value="completed">Project works, no longer working on</option>
-                    <option value="inprogress">Still in progress</option>
-                </select>
+                    <label class="label" for="completion-status">Project Status:</label>
+                    <select class="select" id="completion-status">
+                        <option value="all">All Projects</option>
+                        <option value="workingon">Project works, continuing to make changes</option>
+                        <option value="completed">Project works, no longer working on</option>
+                        <option value="inprogress">Still in progress</option>
+                    </select>
 
-                <label class="label" for="affiliation">Type of Project:</label>
-                <select class="select" id="affiliation">
-                    <option value="all">All Projects</option>
-                    <option value="personal">Personal Projects</option>
-                    <option value="academic">School Projects</option>
-                    <option value="work">Work Projects</option>
-                </select>
-        
-                <label class="label" for="sort-order">Sort Order:</label>
-                <select class="select" id="sort-order">
-                    <option value="relevance">Relevance</option>
-                    <option value="chron-descending">Most Recent First</option>
-                    <option value="chron-ascending">Oldest First</option>
-                    <option value="time-descending">Most Time Spent First</option>
-                    <option value="time-ascending">Least Time Spent First</option>
-                </select>
-            </div>
+                    <label class="label" for="affiliation">Type of Project:</label>
+                    <select class="select" id="affiliation">
+                        <option value="all">All Projects</option>
+                        <option value="personal">Personal Projects</option>
+                        <option value="academic">School Projects</option>
+                        <option value="work">Work Projects</option>
+                    </select>
+            
+                    <label class="label" for="sort-order">Sort Order:</label>
+                    <select class="select" id="sort-order">
+                        <option value="relevance">Relevance</option>
+                        <option value="chron-descending">Most Recent First</option>
+                        <option value="chron-ascending">Oldest First</option>
+                        <option value="time-descending">Most Time Spent First</option>
+                        <option value="time-ascending">Least Time Spent First</option>
+                    </select>
+                </div>
 
-            <div class="results-button" >
-                <button class="results"></button>
+                <div class="results-button" >
+                    <button class="results"></button>
+                </div>
+
             </div>
 
             <div class="project-container">

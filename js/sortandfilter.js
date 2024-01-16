@@ -87,16 +87,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function changeButton() {
         option = (option === "hide") ? "show": "hide";
+        const searchBarContainer = document.querySelector('.search-bar-container');
         if (option === "hide") {
             if (!isMobile()) {
                 searchbar.style.display = lessThan90() ? 'flex' : 'grid';
                 searchbar.style.flexDirection = lessThan90() ? 'column' : 'none';
+                searchBarContainer.style.backgroundColor = '#bbb';
+                searchBarContainer.style.border = '1px solid #000000';
             } else {
                 searchbar.style.display = 'flex';
                 searchbar.style.flexDirection = 'column';
             }
         } else {
             searchbar.style.display = 'none';
+            searchBarContainer.style.border = 'none';
+            searchBarContainer.style.backgroundColor = '#DDD0C8';
         }
         searchResults.textContent = `Showing  ${count} out of ${total} results. (Press to ${option} advanced search)`;
     }
