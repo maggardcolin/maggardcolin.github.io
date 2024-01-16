@@ -74,12 +74,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     } else {
         console.log("Mobile device detected");
-        const navbarelements = document.querySelectorAll('.navbarelements');
-        navbarelements.forEach(navbarelement => {
-            navbarelement.style.width = '75px';
-            const anchorElement = navbarelement.querySelector('a');
-            anchorElement.style.fontSize = '10px';
-        });
         const title = document.querySelector('.title');
         if (title.textContent === "Colin Maggard") {
             const listStructure = document.querySelector('.list-structure');
