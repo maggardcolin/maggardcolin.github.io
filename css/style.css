@@ -183,12 +183,6 @@ label, select, option {
 .active {
     background-color: #0a4690;
 }
-.footer {
-    margin: 0;
-    padding: 0;
-    padding-bottom: 10px;
-    text-align: center;
-}
 .content-body {
     margin-top: 75px;
 }
@@ -289,4 +283,7 @@ label, select, option {
     border-radius: 20px;
     background-color: #bbb;
     text-decoration: none;
+}
+.footer {
+    text-align: center;
 }
