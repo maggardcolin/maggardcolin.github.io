@@ -41,7 +41,6 @@ function lessThan90(){
 function isSmallWindow() {
     // less than 750px wide or 450px tall and it will not show
     return (window.innerWidth < 750) || (window.innerHeight < 450);
-    
 }
 
 /**
@@ -49,9 +48,10 @@ function isSmallWindow() {
  */
 function handleResize() {
     const title = document.querySelector('.title');
+    const titleText = title.textContent;
 
     // home page
-    if (title.textContent === "Colin Maggard") {
+    if (titleText === "Colin Maggard") {
         // show in a 2x2 grid if over 50% width, single column otherwise
         const listStructure = document.querySelector('.list-structure');
         listStructure.style.display = lessThan50() ? 'flex' : 'grid';
@@ -64,7 +64,7 @@ function handleResize() {
     } 
     
     // coursework page
-    else if (title.textContent === "Interactive Course Map") {
+    else if (titleText === "Interactive Course Map") {
         // turn off the interactive course map if under 50% width
         const courseMap = document.querySelector('.course-image');
         courseMap.style.display = isSmallWindow() ? 'none' : 'flex';
@@ -77,7 +77,7 @@ function handleResize() {
     } 
     
     // projects/experience pages
-    else if (title.textContent === "Projects" || title.textContent === "Experience") {
+    else if (titleText === "Projects" || titleText === "Experience") {
         const searchBar = document.querySelector('.search-bar');
         const resultsButton = document.querySelector('.results');
         const resetButton = document.querySelector('.reset');
@@ -117,7 +117,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // desktop logic
     if (!isMobile()) {
         const title = document.querySelector('.title');
-        if (title.textContent === "Colin Maggard" || title.textContent === "Experience" || title.textContent === "Projects" || title.textContent === "Interactive Course Map") {
+        const titleText = title.textContent;
+        if (titleText === "Colin Maggard" || titleText === "Experience" || titleText === "Projects" || titleText === "Interactive Course Map") {
             window.addEventListener('resize', handleResize);
             handleResize();
         }
@@ -127,12 +128,13 @@ document.addEventListener('DOMContentLoaded', function () {
     else {
         console.log("Mobile device detected");
         const title = document.querySelector('.title');
+        const titleText = title.textContent;
         const dropButton = document.querySelector('.drop-button');
         dropButton.style.width = '100%'; 
         dropButton.style.backgroundColor = '#333';
 
         // home page needs its content in a single column
-        if (title.textContent === "Colin Maggard") {
+        if (titleText === "Colin Maggard") {
             const listStructure = document.querySelector('.list-structure');
             listStructure.style.display = 'flex';
             listStructure.style.flexDirection = 'column';
@@ -144,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // projects/experience pages have a specific way the searchbar must look
-         else if (title.textContent === "Experience" || title.textContent === "Projects") {
+         else if (titleText === "Experience" || titleText === "Projects") {
             const headers = document.querySelectorAll('h2');
             headers.forEach(header => {
                 header.fontSize = "10px;"
@@ -161,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // coursework tab does not display the course map
-        else if (title.textContent === "Interactive Course Map") {
+        else if (titleText === "Interactive Course Map") {
             // do not display the map
             const courseMap = document.querySelector('.course-image');
             courseMap.style.display = 'none';
