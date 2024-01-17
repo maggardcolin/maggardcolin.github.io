@@ -1,12 +1,19 @@
+/**
+ * Dropdown menu logic
+ */
 document.addEventListener("DOMContentLoaded", function() {
     const menuButton = document.getElementById("navDrop");
     const buttons = document.querySelectorAll(".dropdown-content");
+
+    // collapsed by default
     buttons.forEach(button => {
         button.style.display = 'none';
     });
     menuButton.style.borderBottom = 'none';
 
-    // toggle menu
+    /**
+     * toggle open or collapsed
+     */ 
     function dropdown() {
         menuButton.classList.toggle("show");
         const buttons = document.querySelectorAll(".dropdown-content");
@@ -16,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
         menuButton.style.borderBottom = menuButton.classList.contains("show") ? '1px solid #bbb' : 'none';
     }
 
-    // close menu if user clicks outside of it
+    // collapse menu if user clicks outside of it
     window.onclick = function(e) {
         if (!e.target.matches('.drop-button') && !e.target.matches('.navbarelements')) {
             if (menuButton.classList.contains('show')) {
@@ -30,6 +37,5 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
         }
     }
-
     menuButton.addEventListener('click', dropdown);
 });
