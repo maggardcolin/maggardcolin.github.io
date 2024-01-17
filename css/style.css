@@ -57,10 +57,13 @@ label, select, option {
     text-decoration: none;
 }
 .list-structure h3 {
-    text-align: center;
+    text-align: left;
 }
 .list-structure p {
-    text-align: center;
+    text-align: left;
+}
+.home-page-list {
+    text-align: left;
 }
 .listblock {
     padding-top: 0;
