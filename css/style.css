@@ -224,7 +224,7 @@ label, select, option {
     border-top-right-radius: 20px;
 }
 #color-key h3 {
-    padding-left: 7.5%;
+    margin-left: 60px;
     font-size: 15px;
 }
 #course-message {
