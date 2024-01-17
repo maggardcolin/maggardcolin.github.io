@@ -1,7 +1,11 @@
+/**
+ * Sorting and filtering logic for the projects and experience pages
+ */
 document.addEventListener("DOMContentLoaded", function() {
 
     // select all project boxes and the options of the two dropdowns
     const title = document.querySelector('.title');
+    const titleText = title.textContent;
     const searchbar = document.querySelector('.search-bar');
     const resetButton = document.querySelector('.reset-button');
     const projects = document.querySelectorAll('.project');
@@ -12,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let option = "hide";
     let count = 0;
     let total = 0;
-    if (title.textContent === "Projects") {
+    if (titleText === "Projects") {
         languageFilter = document.getElementById('filter-option');
         completionStatus = document.getElementById('completion-status');
     }
@@ -23,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
     resetButton.addEventListener('click', filterProjects);
     affiliation.addEventListener('change', filterProjects);
     sortOrder.addEventListener('change', filterProjects);
-    if (title.textContent === "Projects") {
+    if (titleText === "Projects") {
         languageFilter.addEventListener('change', filterProjects);
         completionStatus.addEventListener('change', filterProjects);
     }
@@ -32,8 +36,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const selectedSortOrder = sortOrder.value;
         count = 0;
         total = 0;
+
         // show a given project if all is selected or if its language class is
-        if (title.textContent === "Projects") {
+        if (titleText === "Projects") {
             const selectedLanguage = languageFilter.value;
             const selectedCompletionStatus = completionStatus.value;
             const selectedAffiliation = affiliation.value;
@@ -44,15 +49,17 @@ document.addEventListener("DOMContentLoaded", function() {
                 const affiliationtype = selectedAffiliation === 'all' || project.classList.contains(selectedAffiliation);
                 const isVisible = language && status && affiliationtype;
                 project.style.display = isVisible ? 'block' : 'none';
+                // for fading logic
                 count += isVisible ? 1 : 0;
             });
-        } else if (title.textContent === "Experience") {
+        } else if (titleText === "Experience") {
             const selectedAffiliation = affiliation.value;
             projects.forEach(project => {
                 total += 1;
                 const affiliationtype = selectedAffiliation === 'all' || project.classList.contains(selectedAffiliation);
                 const isVisible = affiliationtype;
                 project.style.display = isVisible ? 'block' : 'none';
+                // for fading logic
                 count += isVisible ? 1 : 0;
             });
         } else {
@@ -130,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function() {
         affiliation.value = 'all';
         sortOrder.value = 'relevance';
 
-        if (title.textContent === "Projects") {
+        if (titleText === "Projects") {
             languageFilter = document.getElementById('filter-option');
             completionStatus = document.getElementById('completion-status');
             languageFilter.value = 'all';

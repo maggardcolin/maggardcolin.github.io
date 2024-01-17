@@ -43,6 +43,10 @@ function setUpElements() {
     }); 
 }
 
+/**
+ * fades each element in order with a 0.2 second delay
+ * @returns if error
+ */
 function fadeElementsInOrder() {
     const title = document.querySelector(".title");
     const titleText = title.textContent;
@@ -66,5 +70,4 @@ function fadeElementsInOrder() {
         element.style.opacity = 1;
         }, index * 200);
     });
-    
 }
