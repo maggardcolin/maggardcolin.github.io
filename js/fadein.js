@@ -1,6 +1,11 @@
+/**
+ * For fading in content, namely on the projects/experience pages and the index/about pages.
+ */
 document.addEventListener("DOMContentLoaded", function() {
     const title = document.querySelector(".title");
     if (title) {
+
+        // when fading in is determined by something other than page load
         let languageFilter = undefined;
         let completionStatus = undefined;
         if (title.textContent === "Projects") {
@@ -25,6 +30,9 @@ document.addEventListener("DOMContentLoaded", function() {
     fadeElementsInOrder();
 });
 
+/**
+ * Assign fade CSS rules to elements that are meant to fade in
+ */
 function setUpElements() {
     const elements = document.querySelectorAll('.fade-in');
     elements.forEach((element) => {
@@ -36,7 +44,7 @@ function setUpElements() {
 function fadeElementsInOrder() {
     const title = document.querySelector(".title");
     let elements = undefined;
-    if (title.textContent === "Colin Maggard") {
+    if (title.textContent === "Colin Maggard" || title.textContent === "About This Website") {
         elements = document.querySelectorAll('.fade-in');
     } else if (title.textContent === "Projects" || title.textContent === "Experience") {
         elements = document.querySelectorAll('.project:is([style*="display: block"])');
@@ -47,7 +55,7 @@ function fadeElementsInOrder() {
     elements.forEach((element) => {
         element.style.opacity = 0;
     });
-    if (title.textContent === "Colin Maggard") {
+    if (title.textContent === "Colin Maggard" || title.textContent === "About This Website") {
         elements.forEach((element, index) => {
             setTimeout(() => {
             element.style.opacity = 1;
