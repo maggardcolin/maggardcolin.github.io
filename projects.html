@@ -101,7 +101,7 @@
                     </p>
                 </a>
 
-                <a href="https://github.com/maggardcolin/portfolio-scraping" target="_blank" class="fade-in project pythonproject workingon personal" chron-order="240117" relevance="2" time-spent="6">
+                <a href="https://github.com/maggardcolin/portfolio-scraping" target="_blank" class="fade-in project pythonproject workingon personal" chron-order="240117" relevance="6" time-spent="6">
                     <h2>Portfolio Scraper - Python</h2>
                     <h3>Main focus: Static webpage scraping</h3>
                     <h4>Approximate time spent:</h4>
@@ -126,7 +126,7 @@
                     </p>
                 </a>
 
-                <a href=https://github.com/maggardcolin/secretsanta target="_blank" class="fade-in project javaproject workingon personal" chron-order="231117" relevance="6" time-spent="5">
+                <a href=https://github.com/maggardcolin/secretsanta target="_blank" class="fade-in project javaproject workingon personal" chron-order="231117" relevance="50" time-spent="5">
                     <h2>Secret Santa App - Java</h2>
                     <h3>Main focus: Hashmaps</h3>
                     <h4>Approximate time spent:</h4>
@@ -139,7 +139,7 @@
                     </p>
                 </a>
 
-                <div class="fade-in project hdlproject completed academic" chron-order="230508" relevance="6" time-spent="20">
+                <div class="fade-in project hdlproject completed academic" chron-order="230508" relevance="50" time-spent="20">
                     <h2>Pong Game - Verilog (created in ECE 352)</h2>
                     <h3>Main focus: Digital system design</h3>
                     <h4>Approximate time spent:</h4>
@@ -152,7 +152,7 @@
                     </p>
                 </div>
 
-                <a href=https://github.com/maggardcolin/data-generator target="_blank" class="fade-in project pythonproject completed personal" chron-order="220601" relevance="9" time-spent="5">
+                <a href=https://github.com/maggardcolin/data-generator target="_blank" class="fade-in project pythonproject completed personal" chron-order="220601" relevance="50" time-spent="5">
                     <h2>Statistical Data Generator App - Python</h2>
                     <h3>Main focus: Application of random walks</h3>
                     <h4>Approximate time spent:</h4>
@@ -165,7 +165,7 @@
                     </p>
                 </a>
 
-                <div class="fade-in project javascriptproject completed academic" chron-order="220515" relevance="8" time-spent="10">
+                <div class="fade-in project javascriptproject completed academic" chron-order="220515" relevance="50" time-spent="10">
                     <h2>Wordle Clone - JavaScript (created in AP Computer Science Principles)</h2>
                     <h3>Main focus: User interfaces</h3>
                     <h4>Approximate time spent:</h4>
@@ -190,6 +190,19 @@
                         Data is read in through a CSV file at the start, and the program determines if a new user-pair has been made. That is, a pair of users that have not been registered as friends, and are not the same person. Next, each user is placed into a node in the graph structure, and an undirected edge is constructed between users who are friends. Dijkstra's algorithm is used to find the shortest path between two friends (think of it as a chain of mutual friends, or how <a href="https://oracleofbacon.org/">Bacon numbers</a> work), and data is displayed in the console.
                     </p>
                 </div>
+
+                <a href=https://github.com/maggardcolin/mad_calendar target="_blank" class="fade-in project pythonproject inprogress personal" chron-order="240119" relevance="2" time-spent="10">
+                    <h2>mad_calendar - Python</h2>
+                    <h3>Main focus: Web Scraping</h3>
+                    <h4>Approximate time spent:</h4>
+                    <p>
+                        Python tool to access UW-Madison Course Schedule app and create an .ics file that can be loaded into a wide variety of calendar apps. This project currently works with a bit of setup. Click this box if you want to check out the code associated with this project.
+                    </p>
+                    <h4>How it works</h4>
+                    <p>
+                        mad_calender uses Selenium, a Python web driver package, to access the Course Schedule app and filters through the page content using a regular expression to find the data about classes. It then filters through the data and puts it into a format called iCal, in an .ics file. This file can be uploaded into the calendar app of the user's choice, provided it supports iCal format. I had to strictly adhere to the RFC 5545 calendar format when processing the data.
+                    </p>
+                </a>
 
             </div>
         </div>

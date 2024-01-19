@@ -47,7 +47,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 const language = selectedLanguage === 'all' || project.classList.contains(selectedLanguage);
                 const status = selectedCompletionStatus === 'all' || project.classList.contains(selectedCompletionStatus);
                 const affiliationtype = selectedAffiliation === 'all' || project.classList.contains(selectedAffiliation);
-                const isVisible = language && status && affiliationtype;
+                let isVisible = language && status && affiliationtype;
+                if (project.classList.contains("archived")) {
+                    isVisible = false;
+                    total -= 1;
+                }
                 project.style.display = isVisible ? 'block' : 'none';
                 // for fading logic
                 count += isVisible ? 1 : 0;
@@ -78,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 return selectedSortOrder === 'time-ascending' ? orderA - orderB : orderB - orderA;
             } else {
                 const orderA = parseInt(a.getAttribute('relevance'));
-                const orderB = parseInt(b.getAttribute('relevance'));     
+                const orderB = parseInt(b.getAttribute('relevance'));
                 return orderA - orderB;
             }
         });
