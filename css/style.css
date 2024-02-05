@@ -59,6 +59,8 @@ label, select, option {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
+    row-gap: 10px;
+    column-gap: 10px;
     padding-bottom: 35px;
 }
 .list-structure a {
