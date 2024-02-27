@@ -52,6 +52,10 @@ document.addEventListener("DOMContentLoaded", function() {
                     isVisible = false;
                     total -= 1;
                 }
+                if (selectedAffiliation === 'archived') {
+                    isVisible = true;
+                    total += 1;
+                }
                 project.style.display = isVisible ? 'block' : 'none';
                 // for fading logic
                 count += isVisible ? 1 : 0;
@@ -125,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function() {
             searchbar.style.display = 'none';
             resetButton.style.display = 'none';
             searchBarContainer.style.border = 'none';
-            searchBarContainer.style.backgroundColor = '#DDD0C8';
+            searchBarContainer.style.backgroundColor = '#b9c1b6';
             searchBarContainer.style.marginBottom = '0';
             searchBarContainer.querySelector('.search-label').textContent = '';
         }
