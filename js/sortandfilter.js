@@ -52,10 +52,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     isVisible = false;
                     total -= 1;
                 }
-                if (selectedAffiliation === 'archived') {
-                    isVisible = true;
-                    total += 1;
-                }
                 project.style.display = isVisible ? 'block' : 'none';
                 // for fading logic
                 count += isVisible ? 1 : 0;
