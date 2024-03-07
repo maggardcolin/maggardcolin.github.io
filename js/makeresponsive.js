@@ -73,7 +73,7 @@ function handleResize() {
         const message = document.querySelector('#course-message');
         message.textContent = isSmallWindow()
         ? "Please increase your window size to be able to see the interactive course map."
-        : "I created the above display by creating an HTML image map over a Sankey diagram and using JavaScript to move the textbox to match the user's mouse position.";
+        : "I created the above display by creating an HTML image map over a Sankey diagram and using JavaScript to move the textbox to match the user's mouse position. Some of my original plans have changed as my interests have developed, but the functionality is there.";
     } 
     
     // projects/experience pages
